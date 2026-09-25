@@ -1,0 +1,19 @@
+{
+  "frozen_at": "2026-09-16T18:29:08.568233+00:00",
+  "selected": "sage",
+  "validation_mean_ap": {
+    "logistic": 0.06722933944474364,
+    "xgboost": 0.10521294290099299,
+    "xgboost_graph": 0.1840387749927054,
+    "sage": 0.19840618307505342,
+    "rgcn": 0.19796353856294643
+  },
+  "policy": "Within 0.005 of best mean validation AP, prefer model order logistic, xgboost, xgboost_graph, sage, rgcn",
+  "serving_seed": 11,
+  "scope": "Offline full-data comparison; does not replace the separately frozen investigator cohort deployment",
+  "input_sha256": {
+    "artifacts\\scaling\\full-gnn\\validation.json": "3f4d722413d81a192555c0089028cb554a4289d3b5ecaffc487bcf1a98dfabe7",
+    "artifacts\\ieee-full-tabular\\validation.json": "7cf3e6811ba4275691ca0bc422b73d8fc22df124969bcb24a24937a5adfa83e5"
+  },
+  "disclosure": "Graph final metrics not read for this selection; the earlier tabular final comparison was previously inspected"
+}

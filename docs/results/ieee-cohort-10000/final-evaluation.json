@@ -1,0 +1,140 @@
+{
+  "version": "0f0de617a814b8f9",
+  "dataset": "IEEE-CIS chronological first-10000 cohort including cutoff ties",
+  "all_model_batch_latency_ms": 3996.612204000002,
+  "rows_in_graph": 10000,
+  "calibrated_ap_interval": {
+    "lower": 0.07971154898401203,
+    "upper": 0.1810992320136715,
+    "method": "row bootstrap, 400 repeats; does not account for temporal/entity dependence"
+  },
+  "metrics": {
+    "logistic": {
+      "n": 1981,
+      "positives": 76,
+      "pr_auc": 0.0490812421051236,
+      "precision_at_k": 0.08,
+      "k": 100,
+      "recall_at_k": 0.10526315789473684,
+      "recall_at_1pct_fpr": 0.039473684210526314,
+      "fraud_value_captured": 2389.04,
+      "fraud_value_fraction": 0.21908799477499014,
+      "brier": 0.26539140939712524,
+      "ece": 0.4743095081542129
+    },
+    "xgboost": {
+      "n": 1981,
+      "positives": 76,
+      "pr_auc": 0.04157927485479099,
+      "precision_at_k": 0.02,
+      "k": 100,
+      "recall_at_k": 0.02631578947368421,
+      "recall_at_1pct_fpr": 0.013157894736842105,
+      "fraud_value_captured": 400.0,
+      "fraud_value_fraction": 0.03668218108947362,
+      "brier": 0.037629276514053345,
+      "ece": 0.017089987226330774
+    },
+    "xgboost_graph": {
+      "n": 1981,
+      "positives": 76,
+      "pr_auc": 0.14458454990601383,
+      "precision_at_k": 0.19,
+      "k": 100,
+      "recall_at_k": 0.25,
+      "recall_at_1pct_fpr": 0.10526315789473684,
+      "fraud_value_captured": 1045.8110000000001,
+      "fraud_value_fraction": 0.09590657121840876,
+      "brier": 0.035537611693143845,
+      "ece": 0.011206029461586733
+    },
+    "sage": {
+      "n": 1981,
+      "positives": 76,
+      "pr_auc": 0.1292108682126773,
+      "precision_at_k": 0.2,
+      "k": 100,
+      "recall_at_k": 0.2631578947368421,
+      "recall_at_1pct_fpr": 0.07894736842105263,
+      "fraud_value_captured": 986.78,
+      "fraud_value_fraction": 0.09049310663867695,
+      "brier": 0.21634559155589098,
+      "ece": 0.393488736424533
+    },
+    "rgcn": {
+      "n": 1981,
+      "positives": 76,
+      "pr_auc": 0.11596245413773577,
+      "precision_at_k": 0.2,
+      "k": 100,
+      "recall_at_k": 0.2631578947368421,
+      "recall_at_1pct_fpr": 0.039473684210526314,
+      "fraud_value_captured": 854.948,
+      "fraud_value_fraction": 0.07840339339520823,
+      "brier": 0.20996735092212604,
+      "ece": 0.39597683918184257
+    },
+    "calibrated": {
+      "n": 1981,
+      "positives": 76,
+      "pr_auc": 0.11596245413773577,
+      "precision_at_k": 0.2,
+      "k": 100,
+      "recall_at_k": 0.2631578947368421,
+      "recall_at_1pct_fpr": 0.039473684210526314,
+      "fraud_value_captured": 854.948,
+      "fraud_value_fraction": 0.07840339339520823,
+      "brier": 0.036245044627067124,
+      "ece": 0.02114503084311589
+    }
+  },
+  "unseen": {
+    "account": {
+      "n": 1155,
+      "positives": 43,
+      "pr_auc": 0.08367569607244947,
+      "precision_at_k": 0.1,
+      "k": 100,
+      "recall_at_k": 0.23255813953488372,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 373.938,
+      "fraud_value_fraction": 0.043739914903572,
+      "brier": 0.03580904622060357,
+      "ece": 0.023584087065582394
+    },
+    "card": {
+      "n": 371,
+      "positives": 5,
+      "pr_auc": 0.031087316608479056,
+      "precision_at_k": 0.02,
+      "k": 100,
+      "recall_at_k": 0.4,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 102.445,
+      "fraud_value_fraction": 0.2545565232516244,
+      "brier": 0.013813447573144226,
+      "ece": 0.005013301185730223
+    },
+    "device": {
+      "n": 47,
+      "positives": 6,
+      "pr_auc": 0.3834640522875817,
+      "precision_at_k": 0.1276595744680851,
+      "k": 47,
+      "recall_at_k": 1.0,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 262.88800000000003,
+      "fraud_value_fraction": 1.0,
+      "brier": 0.10821121227842707,
+      "ece": 0.08143903030207285
+    },
+    "address": {
+      "n": 0,
+      "pr_auc": null
+    },
+    "merchant": {
+      "n": 0,
+      "pr_auc": null
+    }
+  }
+}

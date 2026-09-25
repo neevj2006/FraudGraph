@@ -1,0 +1,45 @@
+{
+  "schema_version": "1",
+  "dataset": "synthetic-demo",
+  "dataset_sha256": "5e6345e43e323a9264b20f2353fe43fe2967e9d2871dbe5b7b4502d917dc7a30",
+  "code_sha256": "d70e90a65b0cd81b3d0cec72dbe1f92b7fd82e78a55dadddd1b04eb2678ad4d7",
+  "features": [
+    "log_amount",
+    "hour_sin",
+    "hour_cos",
+    "missing_identifiers",
+    "account_log_prior_count",
+    "account_log_age",
+    "account_log_accounts",
+    "card_log_prior_count",
+    "card_log_age",
+    "card_log_accounts",
+    "device_log_prior_count",
+    "device_log_age",
+    "device_log_accounts",
+    "address_log_prior_count",
+    "address_log_age",
+    "address_log_accounts",
+    "merchant_log_prior_count",
+    "merchant_log_age",
+    "merchant_log_accounts"
+  ],
+  "graph_schema": "temporal-entity-snapshots-v2",
+  "split_version": "chronological-60-20-20-v1",
+  "seeds": [
+    11,
+    29,
+    42
+  ],
+  "epochs": 100,
+  "neighbors_per_relation": 8,
+  "selected": "rgcn",
+  "serving_seed": 11,
+  "policy": {
+    "top_k": 100
+  },
+  "python": "3.12.13",
+  "label_policy": "offline targets only; no label histories",
+  "calibration": "Platt on later validation half; diagnostic fit metrics only",
+  "version": "f16663bdd7621c76"
+}

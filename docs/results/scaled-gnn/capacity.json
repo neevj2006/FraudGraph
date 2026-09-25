@@ -1,0 +1,130 @@
+{
+  "10000": {
+    "prepare": {
+      "elapsed_seconds": 8.870746309999959,
+      "sampled_peak_rss_bytes": 709394432,
+      "method": "Whole-process RSS sampled every 20 ms; excludes OS filesystem cache and may miss shorter peaks"
+    },
+    "benchmark": {
+      "elapsed_seconds": 0.8084065610000835,
+      "sampled_peak_rss_bytes": 494055424,
+      "method": "Whole-process RSS sampled every 20 ms; excludes OS filesystem cache and may miss shorter peaks"
+    },
+    "runs": [
+      {
+        "model": "sage",
+        "seed": 11,
+        "best_epoch": 1,
+        "epochs_completed": 1,
+        "validation_ap": 0.046174680110190006,
+        "seconds": 0.24217861700003596,
+        "rss_after_bytes": 490926080
+      },
+      {
+        "model": "rgcn",
+        "seed": 11,
+        "best_epoch": 1,
+        "epochs_completed": 1,
+        "validation_ap": 0.06594783704146562,
+        "seconds": 0.047493251000105374,
+        "rss_after_bytes": 494055424
+      }
+    ]
+  },
+  "50000": {
+    "prepare": {
+      "elapsed_seconds": 28.319313071999886,
+      "sampled_peak_rss_bytes": 709124096,
+      "method": "Whole-process RSS sampled every 20 ms; excludes OS filesystem cache and may miss shorter peaks"
+    },
+    "benchmark": {
+      "elapsed_seconds": 1.455793599999879,
+      "sampled_peak_rss_bytes": 514224128,
+      "method": "Whole-process RSS sampled every 20 ms; excludes OS filesystem cache and may miss shorter peaks"
+    },
+    "runs": [
+      {
+        "model": "sage",
+        "seed": 11,
+        "best_epoch": 1,
+        "epochs_completed": 1,
+        "validation_ap": 0.0925815289682416,
+        "seconds": 0.42666201600013665,
+        "rss_after_bytes": 500326400
+      },
+      {
+        "model": "rgcn",
+        "seed": 11,
+        "best_epoch": 1,
+        "epochs_completed": 1,
+        "validation_ap": 0.04578957226475111,
+        "seconds": 0.21409097999980986,
+        "rss_after_bytes": 514224128
+      }
+    ]
+  },
+  "100000": {
+    "prepare": {
+      "elapsed_seconds": 61.39924088399994,
+      "sampled_peak_rss_bytes": 709451776,
+      "method": "Whole-process RSS sampled every 20 ms; excludes OS filesystem cache and may miss shorter peaks"
+    },
+    "benchmark": {
+      "elapsed_seconds": 3.255860766999831,
+      "sampled_peak_rss_bytes": 540041216,
+      "method": "Whole-process RSS sampled every 20 ms; excludes OS filesystem cache and may miss shorter peaks"
+    },
+    "runs": [
+      {
+        "model": "sage",
+        "seed": 11,
+        "best_epoch": 1,
+        "epochs_completed": 1,
+        "validation_ap": 0.05744852860175396,
+        "seconds": 1.3515673939998578,
+        "rss_after_bytes": 512651264
+      },
+      {
+        "model": "rgcn",
+        "seed": 11,
+        "best_epoch": 1,
+        "epochs_completed": 1,
+        "validation_ap": 0.03891072278675904,
+        "seconds": 0.5432426419999956,
+        "rss_after_bytes": 540041216
+      }
+    ]
+  },
+  "590540": {
+    "prepare": {
+      "elapsed_seconds": 295.557847023,
+      "sampled_peak_rss_bytes": 1089720320,
+      "method": "Whole-process RSS sampled every 20 ms; excludes OS filesystem cache and may miss shorter peaks"
+    },
+    "benchmark": {
+      "elapsed_seconds": 13.752941125999996,
+      "sampled_peak_rss_bytes": 789078016,
+      "method": "Whole-process RSS sampled every 20 ms; excludes OS filesystem cache and may miss shorter peaks"
+    },
+    "runs": [
+      {
+        "model": "sage",
+        "seed": 11,
+        "best_epoch": 1,
+        "epochs_completed": 1,
+        "validation_ap": 0.1224242166703292,
+        "seconds": 6.504756773000054,
+        "rss_after_bytes": 628998144
+      },
+      {
+        "model": "rgcn",
+        "seed": 11,
+        "best_epoch": 1,
+        "epochs_completed": 1,
+        "validation_ap": 0.09483577046506328,
+        "seconds": 3.042772222999929,
+        "rss_after_bytes": 789114880
+      }
+    ]
+  }
+}

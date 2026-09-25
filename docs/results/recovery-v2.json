@@ -1,0 +1,46 @@
+{
+  "scope": "Local point-in-time backup drill; scratch restore databases retained for inspection",
+  "live_databases_unchanged": true,
+  "organizations": [
+    {
+      "organization": "north",
+      "tables_verified": [
+        "alerts",
+        "cases",
+        "audit_events",
+        "jobs",
+        "entity_alerts"
+      ],
+      "rows": {
+        "alerts": 202,
+        "cases": 1,
+        "audit_events": 11,
+        "jobs": 2,
+        "entity_alerts": 30140
+      },
+      "sha256": "f1dfe10e4530140bdd8b907786e73bebc2cb1d45375bedf5e9911446ecb5fe9e",
+      "elapsed_seconds": 12.48399999999674,
+      "restored_exactly": true
+    },
+    {
+      "organization": "south",
+      "tables_verified": [
+        "alerts",
+        "cases",
+        "audit_events",
+        "jobs",
+        "entity_alerts"
+      ],
+      "rows": {
+        "alerts": 202,
+        "cases": 0,
+        "audit_events": 8,
+        "jobs": 2,
+        "entity_alerts": 30140
+      },
+      "sha256": "e4c62a68fcae4172ba29834da6337a8503c7ad3ca146b885c0b9116d291360ea",
+      "elapsed_seconds": 11.01600000000326,
+      "restored_exactly": true
+    }
+  ]
+}

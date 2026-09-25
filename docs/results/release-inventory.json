@@ -1,0 +1,27 @@
+{
+  "eligible_files": 146,
+  "runtime_files_compared": 51,
+  "clean_runtime_matches": true,
+  "private_generated_files_eligible": [],
+  "frozen_bundle_integrity": {
+    "release": {
+      "bundle_sha256": "ab4ad15da827e655df13aeec73654bc0d9b9b63a650e1c901ad56b3289f9d103",
+      "verified": true
+    },
+    "ieee-cohort-10000": {
+      "bundle_sha256": "144576b8b0a59383b81c11e0cb192884adb986cd3aa80f12bfe6a75ecd1650c3",
+      "verified": true
+    },
+    "ieee-full-tabular": {
+      "bundle_sha256": "c0d2334c114e9db3f2584b43446380dfdc71ea4cc9e5005b1207ecbc777f227a",
+      "verified": true
+    },
+    "scaling/full-gnn": {
+      "bundle_sha256": "c5c104f1ae0a111928c53fef437fa7cdda6fe41ad5aa5f5f70f2d514b695e2d3",
+      "verified": true
+    }
+  },
+  "required_delivery_files_present": true,
+  "git_remotes": [],
+  "scope": "Source/artifact inventory, not a comprehensive secret or vulnerability scan"
+}

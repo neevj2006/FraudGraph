@@ -1,0 +1,113 @@
+{
+  "folds": [
+    {
+      "fold": 1,
+      "rows": {
+        "train": 143058,
+        "selection": 17797,
+        "calibration": 17672,
+        "assessment": 35325
+      },
+      "time_bounds": {
+        "train": [
+          86400.0,
+          2936886.0
+        ],
+        "selection": [
+          2936889.0,
+          3379812.0
+        ],
+        "calibration": [
+          3379850.0,
+          3888294.0
+        ],
+        "assessment": [
+          3888303.0,
+          4983795.0
+        ]
+      },
+      "checksums": {
+        "counts.npy": "2e566e65431a892e188ba802922c0f089d247fdafcdd957c84e6fa0e6c701918",
+        "neighbors.npy": "23769327f7b85da9b3afa981908452b870f116eb4b064ef9d94b0d94bdf9d617",
+        "pooled_means.npy": "e5c64f7e415bfd6d8df41775831453ababd3d880309b9de3c5a79676c5798615",
+        "relation_means.npy": "1f221e31af60a43cd89b88054f769514b97af2abd91ab2900008cff5f63c7555",
+        "x.npy": "046b14d908016d8e34eb20357c09ed4832dcb27ad63aef8228812d3a8123f572",
+        "splits.npz": "63dd8e0b7d91c776a360d99639d5feee97d8b64ce36f7a5eed88981c027da011",
+        "scaler.joblib": "4c4f82d80113a4b1a27e4288fe21b6aaeea71c0075c1a458db90919a0a31abfd"
+      }
+    },
+    {
+      "fold": 2,
+      "rows": {
+        "train": 213852,
+        "selection": 17598,
+        "calibration": 17708,
+        "assessment": 35263
+      },
+      "time_bounds": {
+        "train": [
+          86400.0,
+          4983795.0
+        ],
+        "selection": [
+          4983811.0,
+          5496355.0
+        ],
+        "calibration": [
+          5496375.0,
+          5941240.0
+        ],
+        "assessment": [
+          5941241.0,
+          6978633.0
+        ]
+      },
+      "checksums": {
+        "counts.npy": "831ce0ffc3a61efecc595368d620bb3b9fa0147160a50f876c1f286d050460b0",
+        "neighbors.npy": "4ce919f4197f545500447664e66eb9e28feb8a7e3c14d317416d494ccd0487b5",
+        "pooled_means.npy": "f0e5289aff7f032d86e39bb8da66a0f6750169e26c8592ae610f269d480b928d",
+        "relation_means.npy": "eac08ac194e697b746dd620b5d400402a7c2a92a5befb121803da0365080ea3d",
+        "x.npy": "7a4ece73047d814e56ff770e0fbf064207329816d8bc69ffacc1e4339830362d",
+        "splits.npz": "d260a12f7b0ce0e754b527c0441c78697c6e664dd2880a15821d02ef357c9c86",
+        "scaler.joblib": "72fa8de4aa649813a44d25add676a9e901539b753dc6ea80172fc3c35ed339bc"
+      }
+    },
+    {
+      "fold": 3,
+      "rows": {
+        "train": 284421,
+        "selection": 17678,
+        "calibration": 17690,
+        "assessment": 35731
+      },
+      "time_bounds": {
+        "train": [
+          86400.0,
+          6978633.0
+        ],
+        "selection": [
+          6978645.0,
+          7479291.0
+        ],
+        "calibration": [
+          7479366.0,
+          7946827.0
+        ],
+        "assessment": [
+          7946847.0,
+          8800356.0
+        ]
+      },
+      "checksums": {
+        "counts.npy": "5bbd186fcc1a166402e569b63417aa726db16b4fdda2bdb4e59814f72f767a55",
+        "neighbors.npy": "acb2f72ac8d4d54211017cf5877dff0e1289bfe011a96fa8510e34b24c19b00b",
+        "pooled_means.npy": "4b4cdefe9dae14f79d28096f7a820c238aea163161d301ae0824b067816abac9",
+        "relation_means.npy": "15985c02264e8b21dcbeb833efa63b4a044212ac19e7311475417d9c403552d9",
+        "x.npy": "419957ed01b0baa0ea94c1e4b33d3f27b5c027ba86c25ca23db90f246790a537",
+        "splits.npz": "93bbec21a5a19401007f035863794ad585c1ec174cbf4ce7b34853f34d937b52",
+        "scaler.joblib": "03b415eeda8b7019cb105a2b1a060ac596a8df1e8890f34ea2e6c8445ac5b545"
+      }
+    }
+  ],
+  "prepare_seconds": 20.95076168799983
+}

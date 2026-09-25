@@ -1,0 +1,20 @@
+{
+  "scope": "Full IEEE-CIS tabular baseline only; not GNN validation",
+  "rows": 590540,
+  "dataset_sha256": "5da8963753afe3213a977c68e96c5df3de21c74c82c0a9090870f792008acea8",
+  "split_rows": {
+    "train": 355520,
+    "validation": 117667,
+    "test": 117353
+  },
+  "epochs_or_trees": 100,
+  "seeds": [
+    11,
+    29,
+    42
+  ],
+  "selection": "Earlier validation mean AP, .005 simplicity margin; serve seed 11",
+  "calibration": "Later validation Platt fit",
+  "final": "Once-only final after freeze; no tuning from test",
+  "note": "The previous early cohort lies within this experiment training window; its evaluation is not reused as this holdout"
+}

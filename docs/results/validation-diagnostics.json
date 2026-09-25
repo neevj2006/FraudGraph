@@ -1,0 +1,418 @@
+{
+  "slices": {
+    "amount_below_100": {
+      "n": 249,
+      "positives": 14,
+      "pr_auc": 0.4971135367233674,
+      "precision_at_k": 0.1,
+      "k": 100,
+      "recall_at_k": 0.7142857142857143,
+      "recall_at_1pct_fpr": 0.2857142857142857,
+      "fraud_value_captured": 675.21,
+      "fraud_value_fraction": 0.7236667238274888,
+      "brier": 0.037995790368113486,
+      "ece": 0.03352430115094933
+    },
+    "amount_at_least_100": {
+      "n": 111,
+      "positives": 14,
+      "pr_auc": 0.6517673322681884,
+      "precision_at_k": 0.14,
+      "k": 100,
+      "recall_at_k": 1.0,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 2889.5899999999997,
+      "fraud_value_fraction": 0.9999999999999999,
+      "brier": 0.0735770206134736,
+      "ece": 0.0638612253938507
+    },
+    "missing_identifier": {
+      "n": 13,
+      "positives": 3,
+      "pr_auc": 0.8055555555555556,
+      "precision_at_k": 0.23076923076923078,
+      "k": 13,
+      "recall_at_k": 1.0,
+      "recall_at_1pct_fpr": 0.3333333333333333,
+      "fraud_value_captured": 443.28999999999996,
+      "fraud_value_fraction": 1.0,
+      "brier": 0.12472919041511296,
+      "ece": 0.17796263172099624
+    },
+    "complete_identifiers": {
+      "n": 347,
+      "positives": 25,
+      "pr_auc": 0.5338975659562678,
+      "precision_at_k": 0.19,
+      "k": 100,
+      "recall_at_k": 0.76,
+      "recall_at_1pct_fpr": 0.32,
+      "fraud_value_captured": 2813.5699999999997,
+      "fraud_value_fraction": 0.8325797345043705,
+      "brier": 0.046128304364148005,
+      "ece": 0.03781738557040594
+    },
+    "first_half": {
+      "n": 180,
+      "positives": 19,
+      "pr_auc": 0.5775919015894844,
+      "precision_at_k": 0.15,
+      "k": 100,
+      "recall_at_k": 0.7894736842105263,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 2342.25,
+      "fraud_value_fraction": 0.8674132586741325,
+      "brier": 0.06740623241745464,
+      "ece": 0.05929331152590752
+    },
+    "second_half": {
+      "n": 180,
+      "positives": 9,
+      "pr_auc": 0.5666467186326999,
+      "precision_at_k": 0.07,
+      "k": 100,
+      "recall_at_k": 0.7777777777777778,
+      "recall_at_1pct_fpr": 0.3333333333333333,
+      "fraud_value_captured": 914.6099999999999,
+      "fraud_value_fraction": 0.8148989628996042,
+      "brier": 0.030527106970077728,
+      "ece": 0.030900235659396223
+    },
+    "unseen_account": {
+      "n": 86,
+      "positives": 5,
+      "pr_auc": 0.5628571428571428,
+      "precision_at_k": 0.05813953488372093,
+      "k": 86,
+      "recall_at_k": 1.0,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 968.1899999999999,
+      "fraud_value_fraction": 1.0,
+      "brier": 0.02966278448557667,
+      "ece": 0.059895996951993186
+    },
+    "unseen_card": {
+      "n": 84,
+      "positives": 0,
+      "pr_auc": null,
+      "precision_at_k": 0.0,
+      "k": 84,
+      "recall_at_k": 0.0,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 0.0,
+      "fraud_value_fraction": 0.0,
+      "brier": 0.0010161047712323832,
+      "ece": 0.02360435712754043
+    },
+    "unseen_device": {
+      "n": 52,
+      "positives": 0,
+      "pr_auc": null,
+      "precision_at_k": 0.0,
+      "k": 52,
+      "recall_at_k": 0.0,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 0.0,
+      "fraud_value_fraction": 0.0,
+      "brier": 0.0007029854799377587,
+      "ece": 0.022567189920226674
+    },
+    "unseen_address": {
+      "n": 0,
+      "pr_auc": null
+    },
+    "unseen_merchant": {
+      "n": 0,
+      "pr_auc": null
+    },
+    "sparse_device": {
+      "n": 81,
+      "positives": 3,
+      "pr_auc": 0.8055555555555556,
+      "precision_at_k": 0.037037037037037035,
+      "k": 81,
+      "recall_at_k": 1.0,
+      "recall_at_1pct_fpr": 0.3333333333333333,
+      "fraud_value_captured": 443.28999999999996,
+      "fraud_value_fraction": 1.0,
+      "brier": 0.020553517916523215,
+      "ece": 0.045619761993732806
+    },
+    "dense_device": {
+      "n": 279,
+      "positives": 25,
+      "pr_auc": 0.5382090798046946,
+      "precision_at_k": 0.19,
+      "k": 100,
+      "recall_at_k": 0.76,
+      "recall_at_1pct_fpr": 0.04,
+      "fraud_value_captured": 2813.5699999999997,
+      "fraud_value_fraction": 0.8325797345043705,
+      "brier": 0.05721564924199802,
+      "ece": 0.04388968034387489
+    }
+  },
+  "error_review": {
+    "false_positives": {
+      "available": 78,
+      "requested_review_count": 25,
+      "examples": [
+        {
+          "id": "TX-001086",
+          "score": 0.17503474959922874,
+          "amount": 145.11,
+          "missing_identifiers": 0,
+          "device_history_count": 28,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001087",
+          "score": 0.040887433769792585,
+          "amount": 25.18,
+          "missing_identifiers": 0,
+          "device_history_count": 11,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001091",
+          "score": 0.17015559605013425,
+          "amount": 6.22,
+          "missing_identifiers": 0,
+          "device_history_count": 76,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001092",
+          "score": 0.04018455184960506,
+          "amount": 173.44,
+          "missing_identifiers": 0,
+          "device_history_count": 6,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001093",
+          "score": 0.10136515161033041,
+          "amount": 80.6,
+          "missing_identifiers": 0,
+          "device_history_count": 77,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001094",
+          "score": 0.07619967872551715,
+          "amount": 101.23,
+          "missing_identifiers": 1,
+          "device_history_count": 0,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001097",
+          "score": 0.16959983362770056,
+          "amount": 76.01,
+          "missing_identifiers": 0,
+          "device_history_count": 31,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001106",
+          "score": 0.053522454105205446,
+          "amount": 85.75,
+          "missing_identifiers": 0,
+          "device_history_count": 78,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001111",
+          "score": 0.04113889773223877,
+          "amount": 107.5,
+          "missing_identifiers": 0,
+          "device_history_count": 9,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001112",
+          "score": 0.04667867201131606,
+          "amount": 5.42,
+          "missing_identifiers": 0,
+          "device_history_count": 11,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001114",
+          "score": 0.06478478301645711,
+          "amount": 59.96,
+          "missing_identifiers": 0,
+          "device_history_count": 79,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001118",
+          "score": 0.07619959539168598,
+          "amount": 53.49,
+          "missing_identifiers": 0,
+          "device_history_count": 80,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001119",
+          "score": 0.05620876869133183,
+          "amount": 83.57,
+          "missing_identifiers": 0,
+          "device_history_count": 1,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001131",
+          "score": 0.2364587254419029,
+          "amount": 835.04,
+          "missing_identifiers": 0,
+          "device_history_count": 26,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001138",
+          "score": 0.03553209063915139,
+          "amount": 19.56,
+          "missing_identifiers": 0,
+          "device_history_count": 3,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001139",
+          "score": 0.08394530750312909,
+          "amount": 119.24,
+          "missing_identifiers": 0,
+          "device_history_count": 81,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001140",
+          "score": 0.5733842950087499,
+          "amount": 45.02,
+          "missing_identifiers": 0,
+          "device_history_count": 21,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001143",
+          "score": 0.044675866315587995,
+          "amount": 45.54,
+          "missing_identifiers": 0,
+          "device_history_count": 12,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001145",
+          "score": 0.04624373250489644,
+          "amount": 94.28,
+          "missing_identifiers": 0,
+          "device_history_count": 16,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001149",
+          "score": 0.06148575007359959,
+          "amount": 271.28,
+          "missing_identifiers": 0,
+          "device_history_count": 82,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001158",
+          "score": 0.03407547638900675,
+          "amount": 25.67,
+          "missing_identifiers": 0,
+          "device_history_count": 19,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001159",
+          "score": 0.044285932762891896,
+          "amount": 6.86,
+          "missing_identifiers": 0,
+          "device_history_count": 12,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001161",
+          "score": 0.2652967523585201,
+          "amount": 95.78,
+          "missing_identifiers": 0,
+          "device_history_count": 22,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001168",
+          "score": 0.06849565498715879,
+          "amount": 14.15,
+          "missing_identifiers": 0,
+          "device_history_count": 0,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001175",
+          "score": 0.03715166327466511,
+          "amount": 18.01,
+          "missing_identifiers": 1,
+          "device_history_count": 0,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        }
+      ]
+    },
+    "false_negatives": {
+      "available": 6,
+      "requested_review_count": 25,
+      "examples": [
+        {
+          "id": "TX-001169",
+          "score": 0.01374002233184725,
+          "amount": 54.21,
+          "missing_identifiers": 0,
+          "device_history_count": 10,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001179",
+          "score": 0.01676111724498799,
+          "amount": 167.27,
+          "missing_identifiers": 0,
+          "device_history_count": 16,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001188",
+          "score": 0.0153988912807047,
+          "amount": 90.02,
+          "missing_identifiers": 0,
+          "device_history_count": 15,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001231",
+          "score": 0.011170559669445562,
+          "amount": 46.52,
+          "missing_identifiers": 0,
+          "device_history_count": 5,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001327",
+          "score": 0.018498769099562478,
+          "amount": 140.67,
+          "missing_identifiers": 0,
+          "device_history_count": 11,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        },
+        {
+          "id": "TX-001430",
+          "score": 0.018830730125410727,
+          "amount": 67.08,
+          "missing_identifiers": 0,
+          "device_history_count": 16,
+          "review_status": "automated diagnostic; requires analyst interpretation"
+        }
+      ]
+    }
+  },
+  "caveat": "Validation includes model-selection and calibration-fit rows; descriptive only."
+}

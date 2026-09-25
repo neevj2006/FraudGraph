@@ -1,0 +1,15 @@
+{
+  "amount": {
+    "psi": 0.028022125469154804
+  },
+  "time": {
+    "psi": 12.433855885838662
+  },
+  "missingness_delta": {
+    "account": 0.0,
+    "card": 0.0,
+    "device": 0.0018518518518518476,
+    "address": 0.0,
+    "merchant": 0.0
+  }
+}

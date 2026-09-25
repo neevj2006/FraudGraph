@@ -1,0 +1,82 @@
+{
+  "version": "0f0de617a814b8f9",
+  "window": "validation (descriptive, includes calibration fit)",
+  "note": "RSS includes Python, imported libraries and all loaded models; not incremental model memory or a peak measurement.",
+  "perturbations": {
+    "unchanged": {
+      "n": 1996,
+      "positives": 40,
+      "pr_auc": 0.07432307489533281,
+      "precision_at_k": 0.08,
+      "k": 100,
+      "recall_at_k": 0.2,
+      "recall_at_1pct_fpr": 0.075,
+      "fraud_value_captured": 452.90700000000004,
+      "fraud_value_fraction": 0.09472988699520356,
+      "brier": 0.019225274171629246,
+      "ece": 0.005489317595151512,
+      "all_model_batch_ms": 2584.490611999996,
+      "process_rss_bytes_after_call": 542748672
+    },
+    "20pct_missing_signatures": {
+      "n": 1996,
+      "positives": 40,
+      "pr_auc": 0.05422695684137481,
+      "precision_at_k": 0.07,
+      "k": 100,
+      "recall_at_k": 0.175,
+      "recall_at_1pct_fpr": 0.05,
+      "fraud_value_captured": 437.38,
+      "fraud_value_fraction": 0.09148226451338162,
+      "brier": 0.01951035161006764,
+      "ece": 0.005196349473584308,
+      "all_model_batch_ms": 2368.5282110000117,
+      "process_rss_bytes_after_call": 535617536
+    },
+    "10pct_shared_device_hub": {
+      "n": 1996,
+      "positives": 40,
+      "pr_auc": 0.04823089353600636,
+      "precision_at_k": 0.07,
+      "k": 100,
+      "recall_at_k": 0.175,
+      "recall_at_1pct_fpr": 0.025,
+      "fraud_value_captured": 438.769,
+      "fraud_value_fraction": 0.09177278732057235,
+      "brier": 0.019541144571240114,
+      "ece": 0.0050627002010903005,
+      "all_model_batch_ms": 3248.869318000004,
+      "process_rss_bytes_after_call": 517423104
+    },
+    "50pct_amount_shift": {
+      "n": 1996,
+      "positives": 40,
+      "pr_auc": 0.074505614524496,
+      "precision_at_k": 0.08,
+      "k": 100,
+      "recall_at_k": 0.2,
+      "recall_at_1pct_fpr": 0.075,
+      "fraud_value_captured": 679.3604999999999,
+      "fraud_value_fraction": 0.09472988699520354,
+      "brier": 0.01922383693871198,
+      "ece": 0.004501390079051881,
+      "all_model_batch_ms": 2765.0426059999945,
+      "process_rss_bytes_after_call": 518348800
+    },
+    "one_hour_time_shift": {
+      "n": 1996,
+      "positives": 40,
+      "pr_auc": 0.07386623973192058,
+      "precision_at_k": 0.08,
+      "k": 100,
+      "recall_at_k": 0.2,
+      "recall_at_1pct_fpr": 0.075,
+      "fraud_value_captured": 452.90700000000004,
+      "fraud_value_fraction": 0.09472988699520356,
+      "brier": 0.019239974408019233,
+      "ece": 0.006390412000527907,
+      "all_model_batch_ms": 3397.840663000011,
+      "process_rss_bytes_after_call": 520335360
+    }
+  }
+}

@@ -1,0 +1,33 @@
+import { test, expect } from "@playwright/test";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+
+test.skip(process.env.TEST_DATASET !== "staging", "Requires the isolated local staging deployment");
+test("organization identity, private cases and clean sign-out", async ({ page }) => {
+  const registry = JSON.parse(readFileSync(resolve("../../artifacts/staging-v2/organizations.json"), "utf8"));
+  const credential = (organization: string) => registry.credentials.find((c: {organization: string; subject: string}) => c.organization === organization && c.subject === "alice").token;
+  const errors: string[] = [];
+  page.on("pageerror", error => errors.push(error.message));
+  await page.goto("/");
+  await page.getByLabel("Analyst access token").fill(credential("north"));
+  await page.getByRole("button", {name: "Open workspace"}).click();
+  await expect(page.locator(".workspace-label")).toContainText("North Research");
+  await expect(page.locator(".queue-row").first()).toBeVisible();
+  await expect(page.locator(".graph-canvas canvas").first()).toBeVisible();
+  await page.getByLabel("Investigation note").fill("North-only staging browser assessment");
+  await page.getByRole("button", {name: "Save assessment"}).click();
+  await expect(page.getByText("Assessment saved")).toBeVisible();
+  await page.locator(".profile").click();
+  await expect(page.getByLabel("Analyst access token")).toHaveValue("");
+  await expect(page.getByText("North-only staging browser assessment")).toHaveCount(0);
+  await page.getByLabel("Analyst access token").fill(credential("south"));
+  await page.getByRole("button", {name: "Open workspace"}).click();
+  await expect(page.locator(".workspace-label")).toContainText("South Research");
+  await expect(page.locator(".queue-row").first()).toBeVisible();
+  await expect(page.getByText("North-only staging browser assessment")).toHaveCount(0);
+  await page.getByRole("button", {name: "My cases", exact: true}).click();
+  await expect(page.getByText("North-only staging browser assessment")).toHaveCount(0);
+  await page.setViewportSize({width: 390, height: 844});
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy();
+  expect(errors).toEqual([]);
+});

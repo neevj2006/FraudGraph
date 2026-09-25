@@ -1,0 +1,140 @@
+{
+  "version": "f16663bdd7621c76",
+  "dataset": "synthetic-demo",
+  "all_model_batch_latency_ms": 759.5433000242338,
+  "rows_in_graph": 1800,
+  "calibrated_ap_interval": {
+    "lower": 0.440303800524939,
+    "upper": 0.764927519907258,
+    "method": "row bootstrap, 400 repeats; does not account for temporal/entity dependence"
+  },
+  "metrics": {
+    "logistic": {
+      "n": 360,
+      "positives": 34,
+      "pr_auc": 0.12963997969892305,
+      "precision_at_k": 0.13,
+      "k": 100,
+      "recall_at_k": 0.38235294117647056,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 2504.42,
+      "fraud_value_fraction": 0.7004057980742071,
+      "brier": 0.23918916285037994,
+      "ece": 0.3797623407509592
+    },
+    "xgboost": {
+      "n": 360,
+      "positives": 34,
+      "pr_auc": 0.16597835461164342,
+      "precision_at_k": 0.13,
+      "k": 100,
+      "recall_at_k": 0.38235294117647056,
+      "recall_at_1pct_fpr": 0.058823529411764705,
+      "fraud_value_captured": 2072.58,
+      "fraud_value_fraction": 0.5796340266299742,
+      "brier": 0.08441588282585144,
+      "ece": 0.02305184230208397
+    },
+    "xgboost_graph": {
+      "n": 360,
+      "positives": 34,
+      "pr_auc": 0.5646882530831446,
+      "precision_at_k": 0.31,
+      "k": 100,
+      "recall_at_k": 0.9117647058823529,
+      "recall_at_1pct_fpr": 0.058823529411764705,
+      "fraud_value_captured": 3478.9800000000005,
+      "fraud_value_fraction": 0.9729589139937411,
+      "brier": 0.048242658376693726,
+      "ece": 0.04412808720436361
+    },
+    "sage": {
+      "n": 360,
+      "positives": 34,
+      "pr_auc": 0.5331464024352313,
+      "precision_at_k": 0.29,
+      "k": 100,
+      "recall_at_k": 0.8529411764705882,
+      "recall_at_1pct_fpr": 0.08823529411764706,
+      "fraud_value_captured": 3194.58,
+      "fraud_value_fraction": 0.8934213727776892,
+      "brier": 0.2540573179787788,
+      "ece": 0.4395183068182733
+    },
+    "rgcn": {
+      "n": 360,
+      "positives": 34,
+      "pr_auc": 0.6021340752835763,
+      "precision_at_k": 0.3,
+      "k": 100,
+      "recall_at_k": 0.8823529411764706,
+      "recall_at_1pct_fpr": 0.2647058823529412,
+      "fraud_value_captured": 3209.4799999999996,
+      "fraud_value_fraction": 0.8975884239876721,
+      "brier": 0.22587297093352177,
+      "ece": 0.41120067222250833
+    },
+    "calibrated": {
+      "n": 360,
+      "positives": 34,
+      "pr_auc": 0.6021340752835763,
+      "precision_at_k": 0.3,
+      "k": 100,
+      "recall_at_k": 0.8823529411764706,
+      "recall_at_1pct_fpr": 0.2647058823529412,
+      "fraud_value_captured": 3209.4799999999996,
+      "fraud_value_fraction": 0.8975884239876721,
+      "brier": 0.04922973306361595,
+      "ece": 0.0307685558718713
+    }
+  },
+  "unseen": {
+    "account": {
+      "n": 107,
+      "positives": 9,
+      "pr_auc": 0.4528178611511945,
+      "precision_at_k": 0.08,
+      "k": 100,
+      "recall_at_k": 0.8888888888888888,
+      "recall_at_1pct_fpr": 0.1111111111111111,
+      "fraud_value_captured": 943.58,
+      "fraud_value_fraction": 0.979721942457248,
+      "brier": 0.06944998869326567,
+      "ece": 0.07433704643898145
+    },
+    "card": {
+      "n": 101,
+      "positives": 3,
+      "pr_auc": 0.06962481962481962,
+      "precision_at_k": 0.03,
+      "k": 100,
+      "recall_at_k": 1.0,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 299.29999999999995,
+      "fraud_value_fraction": 1.0,
+      "brier": 0.031271049295334766,
+      "ece": 0.027874579331423247
+    },
+    "device": {
+      "n": 69,
+      "positives": 2,
+      "pr_auc": 0.08635394456289978,
+      "precision_at_k": 0.028985507246376812,
+      "k": 69,
+      "recall_at_k": 1.0,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 284.4,
+      "fraud_value_fraction": 1.0,
+      "brier": 0.028552973071243888,
+      "ece": 0.012656120180136583
+    },
+    "address": {
+      "n": 0,
+      "pr_auc": null
+    },
+    "merchant": {
+      "n": 0,
+      "pr_auc": null
+    }
+  }
+}

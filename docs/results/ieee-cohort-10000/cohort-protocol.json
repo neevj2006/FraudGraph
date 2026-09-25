@@ -1,0 +1,18 @@
+{
+  "dataset": "IEEE-CIS chronological first-10000 cohort including cutoff ties",
+  "source_manifest": "data/ieee/source-manifest.json",
+  "full_rows": 590540,
+  "cohort_rows": 10000,
+  "cohort_sha256": "4084df1a573232dd76658144be99e224aad4267f037e460472abf73b7cae4fb8",
+  "cutoff_time_inclusive": 313121.0,
+  "selection_rule": "First 10000 chronological rows plus equal-time ties; selected for memory capacity, not labels or performance",
+  "scope": "Public-data cohort benchmark, not full-dataset or production-scale validation",
+  "seeds": [
+    11,
+    29,
+    42
+  ],
+  "epochs": 100,
+  "split": "60/20/20 unique timestamps; earlier validation half selects, later half calibrates",
+  "final_policy": "Open final test once after training freezes all models; no test-based tuning"
+}

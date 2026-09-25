@@ -1,0 +1,142 @@
+{
+  "account": {
+    "sage": {
+      "n": 996,
+      "positives": 24,
+      "pr_auc": 0.09637147009543676,
+      "precision_at_k": 0.05,
+      "k": 100,
+      "recall_at_k": 0.20833333333333334,
+      "recall_at_1pct_fpr": 0.08333333333333333,
+      "fraud_value_captured": 350.748,
+      "fraud_value_fraction": 0.118970703360844,
+      "brier": 0.21091654306966975,
+      "ece": 0.41016639852484893
+    },
+    "rgcn": {
+      "n": 996,
+      "positives": 24,
+      "pr_auc": 0.08980782827458315,
+      "precision_at_k": 0.03,
+      "k": 100,
+      "recall_at_k": 0.125,
+      "recall_at_1pct_fpr": 0.08333333333333333,
+      "fraud_value_captured": 262.474,
+      "fraud_value_fraction": 0.08902892217185607,
+      "brier": 0.19293944528626977,
+      "ece": 0.3936367315879788
+    }
+  },
+  "card": {
+    "sage": {
+      "n": 996,
+      "positives": 24,
+      "pr_auc": 0.09774877255406489,
+      "precision_at_k": 0.05,
+      "k": 100,
+      "recall_at_k": 0.20833333333333334,
+      "recall_at_1pct_fpr": 0.125,
+      "fraud_value_captured": 350.748,
+      "fraud_value_fraction": 0.118970703360844,
+      "brier": 0.2097348258925544,
+      "ece": 0.4100927731179329
+    },
+    "rgcn": {
+      "n": 996,
+      "positives": 24,
+      "pr_auc": 0.044909972794941105,
+      "precision_at_k": 0.03,
+      "k": 100,
+      "recall_at_k": 0.125,
+      "recall_at_1pct_fpr": 0.08333333333333333,
+      "fraud_value_captured": 110.085,
+      "fraud_value_fraction": 0.03733988470206106,
+      "brier": 0.1889068675523135,
+      "ece": 0.3838004103177284
+    }
+  },
+  "device": {
+    "sage": {
+      "n": 996,
+      "positives": 24,
+      "pr_auc": 0.08129597421333964,
+      "precision_at_k": 0.05,
+      "k": 100,
+      "recall_at_k": 0.20833333333333334,
+      "recall_at_1pct_fpr": 0.125,
+      "fraud_value_captured": 350.748,
+      "fraud_value_fraction": 0.118970703360844,
+      "brier": 0.20473343983996337,
+      "ece": 0.40224310569465166
+    },
+    "rgcn": {
+      "n": 996,
+      "positives": 24,
+      "pr_auc": 0.041870437955030926,
+      "precision_at_k": 0.04,
+      "k": 100,
+      "recall_at_k": 0.16666666666666666,
+      "recall_at_1pct_fpr": 0.041666666666666664,
+      "fraud_value_captured": 361.885,
+      "fraud_value_fraction": 0.12274827792528833,
+      "brier": 0.20551666935801494,
+      "ece": 0.40310266640142023
+    }
+  },
+  "address": {
+    "sage": {
+      "n": 996,
+      "positives": 24,
+      "pr_auc": 0.10808528447126176,
+      "precision_at_k": 0.07,
+      "k": 100,
+      "recall_at_k": 0.2916666666666667,
+      "recall_at_1pct_fpr": 0.125,
+      "fraud_value_captured": 776.748,
+      "fraud_value_fraction": 0.26346623756693943,
+      "brier": 0.18554482078619458,
+      "ece": 0.3696443445412031
+    },
+    "rgcn": {
+      "n": 996,
+      "positives": 24,
+      "pr_auc": 0.1019200670733706,
+      "precision_at_k": 0.05,
+      "k": 100,
+      "recall_at_k": 0.20833333333333334,
+      "recall_at_1pct_fpr": 0.08333333333333333,
+      "fraud_value_captured": 429.137,
+      "fraud_value_fraction": 0.14555957761173982,
+      "brier": 0.24693753413031488,
+      "ece": 0.4506198944127464
+    }
+  },
+  "merchant": {
+    "sage": {
+      "n": 996,
+      "positives": 24,
+      "pr_auc": 0.10412742773380602,
+      "precision_at_k": 0.05,
+      "k": 100,
+      "recall_at_k": 0.20833333333333334,
+      "recall_at_1pct_fpr": 0.125,
+      "fraud_value_captured": 350.748,
+      "fraud_value_fraction": 0.118970703360844,
+      "brier": 0.20786094337060315,
+      "ece": 0.40600386252963394
+    },
+    "rgcn": {
+      "n": 996,
+      "positives": 24,
+      "pr_auc": 0.10045077394345327,
+      "precision_at_k": 0.04,
+      "k": 100,
+      "recall_at_k": 0.16666666666666666,
+      "recall_at_1pct_fpr": 0.08333333333333333,
+      "fraud_value_captured": 150.748,
+      "fraud_value_fraction": 0.05113242439084617,
+      "brier": 0.20962353443776094,
+      "ece": 0.4047805398448284
+    }
+  }
+}

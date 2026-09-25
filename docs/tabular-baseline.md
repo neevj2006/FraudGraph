@@ -1,0 +1,9 @@
+# Tabular baseline decision
+
+The full-data tabular experiment selects XGBoost with strictly earlier graph-history statistics. Its mean validation average precision (AP) is 0.1840, compared with 0.1052 for transaction-only XGBoost and 0.0672 for weighted logistic regression. All three use the same chronological split and seeds 11, 29 and 42. These configurations are deterministic across seeds; equal results do not establish low population uncertainty.
+
+At the fixed validation review budget of 100 transactions, the history-feature tree identifies 30 frauds, compared with 21 for the transaction-only tree and 17 for logistic regression. Its validation fraud-value fraction is 1.50%, versus 0.48% and 0.44%. The history features therefore improve both ranking and the declared review-budget measurements in this experiment. These are source amount units, not verified recoverable financial losses.
+
+The once-opened final holdout preserves the ordering: AP 0.1262, 0.0826 and 0.0528, respectively. The history-feature tree finds 33 of the 4,025 frauds in its top 100; recall is only 0.82% over the entire 117,353-row window. A top-100 research budget does not by itself establish an operationally useful queue size. The AP decline from validation also limits claims of temporal generalization. See [the complete report](ieee-full-tabular.md) for calibration, uncertainty and unseen-signature slices.
+
+The original synthetic and 10,000-row cohort experiments also include an amount-ranking rule. The full-data experiment deliberately compares the three trained tabular families and the separately frozen graph families. No new test-based tuning or deployment switch follows this diagnostic comparison. The investigator application retains its compatible cohort artifact, while the overall full-data research choice is recorded separately from validation.

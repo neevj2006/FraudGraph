@@ -1,0 +1,17 @@
+{
+  "organizations": 2,
+  "worker_jobs_completed": 2,
+  "worker_scoring_ms": {
+    "north": 5921.727501000078,
+    "south": 6596.203319000097
+  },
+  "cross_organization_job_probe": "404",
+  "load": {
+    "requests": 200,
+    "concurrency": 20,
+    "errors": 0,
+    "p95_ms": 154.3950000195764,
+    "budget_ms": 2000
+  },
+  "scope": "Local staging observation; not an internet-facing production SLA"
+}

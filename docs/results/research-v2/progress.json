@@ -1,0 +1,896 @@
+[
+  {
+    "fold": 1,
+    "candidate": "tree_reference",
+    "seed": 11,
+    "training": {
+      "trees": 100
+    },
+    "fit_seconds": 0.6801871099999062,
+    "prediction_seconds": 0.04437594999990324,
+    "raw_metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.14317421211069215,
+      "precision_at_k": 0.35,
+      "k": 100,
+      "recall_at_k": 0.024305555555555556,
+      "recall_at_1pct_fpr": 0.07916666666666666,
+      "fraud_value_captured": 4503.523,
+      "fraud_value_fraction": 0.02346641886894075,
+      "brier": 0.03718547523021698,
+      "ece": 0.007685429750818443
+    },
+    "metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.14317421211069215,
+      "precision_at_k": 0.35,
+      "k": 100,
+      "recall_at_k": 0.024305555555555556,
+      "recall_at_1pct_fpr": 0.07916666666666666,
+      "fraud_value_captured": 4503.523,
+      "fraud_value_fraction": 0.02346641886894075,
+      "brier": 0.03741617500782013,
+      "ece": 0.006569673105367769
+    },
+    "bundle_sha256": "3630401c6f1555b9586386ab4459b04ecd3d97f5ab33324fb29606cc66d6a461"
+  },
+  {
+    "fold": 1,
+    "candidate": "tree_reference",
+    "seed": 29,
+    "training": {
+      "trees": 100
+    },
+    "fit_seconds": 0.6271057740000288,
+    "prediction_seconds": 0.03589342899999792,
+    "raw_metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.14317421211069215,
+      "precision_at_k": 0.35,
+      "k": 100,
+      "recall_at_k": 0.024305555555555556,
+      "recall_at_1pct_fpr": 0.07916666666666666,
+      "fraud_value_captured": 4503.523,
+      "fraud_value_fraction": 0.02346641886894075,
+      "brier": 0.03718547523021698,
+      "ece": 0.007685429750818443
+    },
+    "metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.14317421211069215,
+      "precision_at_k": 0.35,
+      "k": 100,
+      "recall_at_k": 0.024305555555555556,
+      "recall_at_1pct_fpr": 0.07916666666666666,
+      "fraud_value_captured": 4503.523,
+      "fraud_value_fraction": 0.02346641886894075,
+      "brier": 0.03741617500782013,
+      "ece": 0.006569673105367769
+    },
+    "bundle_sha256": "d87766666a9660149027bf057df5e1e489ec0e0a00b76d19f11dafc980fca134"
+  },
+  {
+    "fold": 1,
+    "candidate": "tree_reference",
+    "seed": 42,
+    "training": {
+      "trees": 100
+    },
+    "fit_seconds": 0.5415659750001396,
+    "prediction_seconds": 0.09826122300000861,
+    "raw_metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.14317421211069215,
+      "precision_at_k": 0.35,
+      "k": 100,
+      "recall_at_k": 0.024305555555555556,
+      "recall_at_1pct_fpr": 0.07916666666666666,
+      "fraud_value_captured": 4503.523,
+      "fraud_value_fraction": 0.02346641886894075,
+      "brier": 0.03718547523021698,
+      "ece": 0.007685429750818443
+    },
+    "metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.14317421211069215,
+      "precision_at_k": 0.35,
+      "k": 100,
+      "recall_at_k": 0.024305555555555556,
+      "recall_at_1pct_fpr": 0.07916666666666666,
+      "fraud_value_captured": 4503.523,
+      "fraud_value_fraction": 0.02346641886894075,
+      "brier": 0.03741617500782013,
+      "ece": 0.006569673105367769
+    },
+    "bundle_sha256": "f56c352df510dfb795d6d1f0b2aee414605aeda8da696ada9eecbfa280957528"
+  },
+  {
+    "fold": 1,
+    "candidate": "tree_regularized",
+    "seed": 11,
+    "training": {
+      "trees": 250
+    },
+    "fit_seconds": 1.282520581999961,
+    "prediction_seconds": 0.10529955200013319,
+    "raw_metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.14350605793961427,
+      "precision_at_k": 0.31,
+      "k": 100,
+      "recall_at_k": 0.021527777777777778,
+      "recall_at_1pct_fpr": 0.08541666666666667,
+      "fraud_value_captured": 5523.055,
+      "fraud_value_fraction": 0.028778874242720097,
+      "brier": 0.03717590123414993,
+      "ece": 0.008440336964692279
+    },
+    "metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.14350605793961427,
+      "precision_at_k": 0.31,
+      "k": 100,
+      "recall_at_k": 0.021527777777777778,
+      "recall_at_1pct_fpr": 0.08541666666666667,
+      "fraud_value_captured": 5523.055,
+      "fraud_value_fraction": 0.028778874242720097,
+      "brier": 0.037535615265369415,
+      "ece": 0.007818689744943269
+    },
+    "bundle_sha256": "1af570f593c9f89e34688a7826ff8029b45cf1231714f87168503c67f707ccac"
+  },
+  {
+    "fold": 1,
+    "candidate": "tree_regularized",
+    "seed": 29,
+    "training": {
+      "trees": 250
+    },
+    "fit_seconds": 1.3545024640000065,
+    "prediction_seconds": 0.07749558199998319,
+    "raw_metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.14240910895570053,
+      "precision_at_k": 0.33,
+      "k": 100,
+      "recall_at_k": 0.022916666666666665,
+      "recall_at_1pct_fpr": 0.08680555555555555,
+      "fraud_value_captured": 6662.584,
+      "fraud_value_fraction": 0.034716595628245424,
+      "brier": 0.0372188575565815,
+      "ece": 0.00945525971725741
+    },
+    "metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.14240910895570047,
+      "precision_at_k": 0.33,
+      "k": 100,
+      "recall_at_k": 0.022916666666666665,
+      "recall_at_1pct_fpr": 0.08680555555555555,
+      "fraud_value_captured": 6662.584,
+      "fraud_value_fraction": 0.034716595628245424,
+      "brier": 0.037600137293338776,
+      "ece": 0.008101066431242865
+    },
+    "bundle_sha256": "eb5e35b1ab9e2051d0b1a8328f49da3f0a5741f0190ee1542c460f0f9988591b"
+  },
+  {
+    "fold": 1,
+    "candidate": "tree_regularized",
+    "seed": 42,
+    "training": {
+      "trees": 250
+    },
+    "fit_seconds": 1.3016801489998215,
+    "prediction_seconds": 0.07780340999988766,
+    "raw_metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.14353078209865594,
+      "precision_at_k": 0.32,
+      "k": 100,
+      "recall_at_k": 0.022222222222222223,
+      "recall_at_1pct_fpr": 0.08611111111111111,
+      "fraud_value_captured": 5304.655,
+      "fraud_value_fraction": 0.027640861651027623,
+      "brier": 0.03719757869839668,
+      "ece": 0.009479229968655472
+    },
+    "metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.14353078209865594,
+      "precision_at_k": 0.32,
+      "k": 100,
+      "recall_at_k": 0.022222222222222223,
+      "recall_at_1pct_fpr": 0.08611111111111111,
+      "fraud_value_captured": 5304.655,
+      "fraud_value_fraction": 0.027640861651027623,
+      "brier": 0.037545423954725266,
+      "ece": 0.007473451107824767
+    },
+    "bundle_sha256": "28b922cab524a6f4b783d7c6d3333fe47631974cfe187d9cb4e5321b3ff07265"
+  },
+  {
+    "fold": 1,
+    "candidate": "sage_reference",
+    "seed": 11,
+    "training": {
+      "best_epoch": 4,
+      "epochs_completed": 14
+    },
+    "fit_seconds": 11.081237961999932,
+    "prediction_seconds": 0.3106011180000223,
+    "raw_metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.10114607535347853,
+      "precision_at_k": 0.1,
+      "k": 100,
+      "recall_at_k": 0.006944444444444444,
+      "recall_at_1pct_fpr": 0.049305555555555554,
+      "fraud_value_captured": 635.8800000000001,
+      "fraud_value_fraction": 0.0033133674304276998,
+      "brier": 0.1893550440647905,
+      "ece": 0.3769579612204815
+    },
+    "metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.10114607535347853,
+      "precision_at_k": 0.1,
+      "k": 100,
+      "recall_at_k": 0.006944444444444444,
+      "recall_at_1pct_fpr": 0.049305555555555554,
+      "fraud_value_captured": 635.8800000000001,
+      "fraud_value_fraction": 0.0033133674304276998,
+      "brier": 0.03823274433824964,
+      "ece": 0.008291830344260849
+    },
+    "bundle_sha256": "534b2e1f7f32b1522f519797e045d5e9aaa38ba434c25481b3488abf4e4a5c9d"
+  },
+  {
+    "fold": 1,
+    "candidate": "sage_unweighted",
+    "seed": 11,
+    "training": {
+      "best_epoch": 22,
+      "epochs_completed": 32
+    },
+    "fit_seconds": 25.108414734999997,
+    "prediction_seconds": 0.29417491999993217,
+    "raw_metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.09303323756740461,
+      "precision_at_k": 0.1,
+      "k": 100,
+      "recall_at_k": 0.006944444444444444,
+      "recall_at_1pct_fpr": 0.04236111111111111,
+      "fraud_value_captured": 435.56,
+      "fraud_value_fraction": 0.002269563939732479,
+      "brier": 0.03925029234814816,
+      "ece": 0.032208745004045046
+    },
+    "metrics": {
+      "n": 35325,
+      "positives": 1440,
+      "pr_auc": 0.09303323756740461,
+      "precision_at_k": 0.1,
+      "k": 100,
+      "recall_at_k": 0.006944444444444444,
+      "recall_at_1pct_fpr": 0.04236111111111111,
+      "fraud_value_captured": 435.56,
+      "fraud_value_fraction": 0.002269563939732479,
+      "brier": 0.03810684876433715,
+      "ece": 0.0049745445554340685
+    },
+    "bundle_sha256": "e839d34e7ff0b7882435e4a403cfa1dafe4d116c4b3b5c67ed835414c899282e"
+  },
+  {
+    "fold": 2,
+    "candidate": "tree_reference",
+    "seed": 11,
+    "training": {
+      "trees": 100
+    },
+    "fit_seconds": 0.771098449999954,
+    "prediction_seconds": 0.05962051500000598,
+    "raw_metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.16564652324279322,
+      "precision_at_k": 0.42,
+      "k": 100,
+      "recall_at_k": 0.02930914166085136,
+      "recall_at_1pct_fpr": 0.08862526168876483,
+      "fraud_value_captured": 10959.982,
+      "fraud_value_fraction": 0.05800778518682607,
+      "brier": 0.03657649829983711,
+      "ece": 0.001970340188601017
+    },
+    "metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.16564652324279322,
+      "precision_at_k": 0.42,
+      "k": 100,
+      "recall_at_k": 0.02930914166085136,
+      "recall_at_1pct_fpr": 0.08862526168876483,
+      "fraud_value_captured": 10959.982,
+      "fraud_value_fraction": 0.05800778518682607,
+      "brier": 0.037087664008140564,
+      "ece": 0.00844388972560398
+    },
+    "bundle_sha256": "a1adcadf4a93c48493c1917f131160a0fd5972e0131a1299cb413fd009f8e6bf"
+  },
+  {
+    "fold": 2,
+    "candidate": "tree_reference",
+    "seed": 29,
+    "training": {
+      "trees": 100
+    },
+    "fit_seconds": 0.7471302659998855,
+    "prediction_seconds": 0.08158718799995768,
+    "raw_metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.16564652324279322,
+      "precision_at_k": 0.42,
+      "k": 100,
+      "recall_at_k": 0.02930914166085136,
+      "recall_at_1pct_fpr": 0.08862526168876483,
+      "fraud_value_captured": 10959.982,
+      "fraud_value_fraction": 0.05800778518682607,
+      "brier": 0.03657649829983711,
+      "ece": 0.001970340188601017
+    },
+    "metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.16564652324279322,
+      "precision_at_k": 0.42,
+      "k": 100,
+      "recall_at_k": 0.02930914166085136,
+      "recall_at_1pct_fpr": 0.08862526168876483,
+      "fraud_value_captured": 10959.982,
+      "fraud_value_fraction": 0.05800778518682607,
+      "brier": 0.037087664008140564,
+      "ece": 0.00844388972560398
+    },
+    "bundle_sha256": "4878d2eb9c6959adf9b3657344fb77939ab73490007496361034512ab39213ca"
+  },
+  {
+    "fold": 2,
+    "candidate": "tree_reference",
+    "seed": 42,
+    "training": {
+      "trees": 100
+    },
+    "fit_seconds": 0.707503208000162,
+    "prediction_seconds": 0.06510907699998825,
+    "raw_metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.16564652324279322,
+      "precision_at_k": 0.42,
+      "k": 100,
+      "recall_at_k": 0.02930914166085136,
+      "recall_at_1pct_fpr": 0.08862526168876483,
+      "fraud_value_captured": 10959.982,
+      "fraud_value_fraction": 0.05800778518682607,
+      "brier": 0.03657649829983711,
+      "ece": 0.001970340188601017
+    },
+    "metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.16564652324279322,
+      "precision_at_k": 0.42,
+      "k": 100,
+      "recall_at_k": 0.02930914166085136,
+      "recall_at_1pct_fpr": 0.08862526168876483,
+      "fraud_value_captured": 10959.982,
+      "fraud_value_fraction": 0.05800778518682607,
+      "brier": 0.037087664008140564,
+      "ece": 0.00844388972560398
+    },
+    "bundle_sha256": "487fe6ebee22151921450f4f78e397a77e9cb44b5fd8439cfa28eaba7ecca282"
+  },
+  {
+    "fold": 2,
+    "candidate": "tree_regularized",
+    "seed": 11,
+    "training": {
+      "trees": 250
+    },
+    "fit_seconds": 1.9011197520001133,
+    "prediction_seconds": 0.10285957500013865,
+    "raw_metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.1613635374086278,
+      "precision_at_k": 0.33,
+      "k": 100,
+      "recall_at_k": 0.023028611304954642,
+      "recall_at_1pct_fpr": 0.10956036287508723,
+      "fraud_value_captured": 6909.801,
+      "fraud_value_fraction": 0.03657143342860563,
+      "brier": 0.036572035402059555,
+      "ece": 0.004809841770980158
+    },
+    "metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.16136353267724932,
+      "precision_at_k": 0.33,
+      "k": 100,
+      "recall_at_k": 0.023028611304954642,
+      "recall_at_1pct_fpr": 0.10956036287508723,
+      "fraud_value_captured": 6909.801,
+      "fraud_value_fraction": 0.03657143342860563,
+      "brier": 0.03697134554386139,
+      "ece": 0.006899529539507796
+    },
+    "bundle_sha256": "6a1d080929d62448ce12e2f498ca2c25ebbe2b06ea9f7f60be8c691066598f00"
+  },
+  {
+    "fold": 2,
+    "candidate": "tree_regularized",
+    "seed": 29,
+    "training": {
+      "trees": 250
+    },
+    "fit_seconds": 1.9223842849999073,
+    "prediction_seconds": 0.06304288899991661,
+    "raw_metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.16119602410026984,
+      "precision_at_k": 0.37,
+      "k": 100,
+      "recall_at_k": 0.025819958129797628,
+      "recall_at_1pct_fpr": 0.09560362875087229,
+      "fraud_value_captured": 9025.098,
+      "fraud_value_fraction": 0.04776704433219449,
+      "brier": 0.036611102521419525,
+      "ece": 0.004864101133323857
+    },
+    "metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.16119602410026984,
+      "precision_at_k": 0.37,
+      "k": 100,
+      "recall_at_k": 0.025819958129797628,
+      "recall_at_1pct_fpr": 0.09560362875087229,
+      "fraud_value_captured": 9025.098,
+      "fraud_value_fraction": 0.04776704433219449,
+      "brier": 0.03701348602771759,
+      "ece": 0.007435922234955939
+    },
+    "bundle_sha256": "b3f7323e0c112862d152a26f29613b57b8c928b91fab519f83e0512fa72a5061"
+  },
+  {
+    "fold": 2,
+    "candidate": "tree_regularized",
+    "seed": 42,
+    "training": {
+      "trees": 250
+    },
+    "fit_seconds": 1.915970236000021,
+    "prediction_seconds": 0.06822414099997332,
+    "raw_metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.1560412085460949,
+      "precision_at_k": 0.33,
+      "k": 100,
+      "recall_at_k": 0.023028611304954642,
+      "recall_at_1pct_fpr": 0.10258199581297976,
+      "fraud_value_captured": 7108.282999999999,
+      "fraud_value_fraction": 0.03762193708996671,
+      "brier": 0.0367511548101902,
+      "ece": 0.005847443545459721
+    },
+    "metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.15604118955856494,
+      "precision_at_k": 0.33,
+      "k": 100,
+      "recall_at_k": 0.023028611304954642,
+      "recall_at_1pct_fpr": 0.10258199581297976,
+      "fraud_value_captured": 7108.282999999999,
+      "fraud_value_fraction": 0.03762193708996671,
+      "brier": 0.03717639669775963,
+      "ece": 0.006515668616312814
+    },
+    "bundle_sha256": "979e36085d22dc65f3a42a9cc950aefdaaca2c7dc3e6ec0e27711c59074b1637"
+  },
+  {
+    "fold": 2,
+    "candidate": "sage_reference",
+    "seed": 11,
+    "training": {
+      "best_epoch": 4,
+      "epochs_completed": 14
+    },
+    "fit_seconds": 16.76917352700002,
+    "prediction_seconds": 0.3168232259999968,
+    "raw_metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.1021726753163198,
+      "precision_at_k": 0.18,
+      "k": 100,
+      "recall_at_k": 0.01256106071179344,
+      "recall_at_1pct_fpr": 0.041172365666434056,
+      "fraud_value_captured": 925.3329999999999,
+      "fraud_value_fraction": 0.004897500551577669,
+      "brier": 0.21517044552395156,
+      "ece": 0.4044908485828949
+    },
+    "metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.1021726753163198,
+      "precision_at_k": 0.18,
+      "k": 100,
+      "recall_at_k": 0.01256106071179344,
+      "recall_at_1pct_fpr": 0.041172365666434056,
+      "fraud_value_captured": 925.3329999999999,
+      "fraud_value_fraction": 0.004897500551577669,
+      "brier": 0.038341545345146485,
+      "ece": 0.008407630902339583
+    },
+    "bundle_sha256": "8ca2b9fddbefbd16c7a5d01c502b2e80b5bd4dd2d3448ac8acfa553a05d1ebd0"
+  },
+  {
+    "fold": 2,
+    "candidate": "sage_unweighted",
+    "seed": 11,
+    "training": {
+      "best_epoch": 40,
+      "epochs_completed": 40
+    },
+    "fit_seconds": 46.917853223000066,
+    "prediction_seconds": 0.3247376700001041,
+    "raw_metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.10894075095659392,
+      "precision_at_k": 0.2,
+      "k": 100,
+      "recall_at_k": 0.013956734124214934,
+      "recall_at_1pct_fpr": 0.05512909979064899,
+      "fraud_value_captured": 2099.294,
+      "fraud_value_fraction": 0.011110911988358452,
+      "brier": 0.03777295876708252,
+      "ece": 0.006886405129536258
+    },
+    "metrics": {
+      "n": 35263,
+      "positives": 1433,
+      "pr_auc": 0.10894075095659392,
+      "precision_at_k": 0.2,
+      "k": 100,
+      "recall_at_k": 0.013956734124214934,
+      "recall_at_1pct_fpr": 0.05512909979064899,
+      "fraud_value_captured": 2099.294,
+      "fraud_value_fraction": 0.011110911988358452,
+      "brier": 0.037947825605757435,
+      "ece": 0.007760803278870135
+    },
+    "bundle_sha256": "771dd89b72ad9a8fae587e5ebe7b675c5f01197cfdd2c1532399cf9eb98fefc6"
+  },
+  {
+    "fold": 3,
+    "candidate": "tree_reference",
+    "seed": 11,
+    "training": {
+      "trees": 100
+    },
+    "fit_seconds": 1.0358971719999772,
+    "prediction_seconds": 0.03694473999985348,
+    "raw_metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.12295435399223428,
+      "precision_at_k": 0.4,
+      "k": 100,
+      "recall_at_k": 0.03475238922675934,
+      "recall_at_1pct_fpr": 0.08340573414422242,
+      "fraud_value_captured": 9760.313,
+      "fraud_value_fraction": 0.05201960658428141,
+      "brier": 0.029843170195817947,
+      "ece": 0.0026333511981059383
+    },
+    "metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.12295435399223428,
+      "precision_at_k": 0.4,
+      "k": 100,
+      "recall_at_k": 0.03475238922675934,
+      "recall_at_1pct_fpr": 0.08340573414422242,
+      "fraud_value_captured": 9760.313,
+      "fraud_value_fraction": 0.05201960658428141,
+      "brier": 0.029807621613144875,
+      "ece": 0.004033618680364405
+    },
+    "bundle_sha256": "482c90acdd3ba0478842ef0b465ed603494019aefe4dab62bd7969ae42f69e10"
+  },
+  {
+    "fold": 3,
+    "candidate": "tree_reference",
+    "seed": 29,
+    "training": {
+      "trees": 100
+    },
+    "fit_seconds": 1.050092751000193,
+    "prediction_seconds": 0.0310138800000459,
+    "raw_metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.12295435399223428,
+      "precision_at_k": 0.4,
+      "k": 100,
+      "recall_at_k": 0.03475238922675934,
+      "recall_at_1pct_fpr": 0.08340573414422242,
+      "fraud_value_captured": 9760.313,
+      "fraud_value_fraction": 0.05201960658428141,
+      "brier": 0.029843170195817947,
+      "ece": 0.0026333511981059383
+    },
+    "metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.12295435399223428,
+      "precision_at_k": 0.4,
+      "k": 100,
+      "recall_at_k": 0.03475238922675934,
+      "recall_at_1pct_fpr": 0.08340573414422242,
+      "fraud_value_captured": 9760.313,
+      "fraud_value_fraction": 0.05201960658428141,
+      "brier": 0.029807621613144875,
+      "ece": 0.004033618680364405
+    },
+    "bundle_sha256": "b33466aeb3b4175eec14ffd1038a411409c1aa19f49f31d650e15af57c4c7f49"
+  },
+  {
+    "fold": 3,
+    "candidate": "tree_reference",
+    "seed": 42,
+    "training": {
+      "trees": 100
+    },
+    "fit_seconds": 1.0638711009999042,
+    "prediction_seconds": 0.03323098700002447,
+    "raw_metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.12295435399223428,
+      "precision_at_k": 0.4,
+      "k": 100,
+      "recall_at_k": 0.03475238922675934,
+      "recall_at_1pct_fpr": 0.08340573414422242,
+      "fraud_value_captured": 9760.313,
+      "fraud_value_fraction": 0.05201960658428141,
+      "brier": 0.029843170195817947,
+      "ece": 0.0026333511981059383
+    },
+    "metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.12295435399223428,
+      "precision_at_k": 0.4,
+      "k": 100,
+      "recall_at_k": 0.03475238922675934,
+      "recall_at_1pct_fpr": 0.08340573414422242,
+      "fraud_value_captured": 9760.313,
+      "fraud_value_fraction": 0.05201960658428141,
+      "brier": 0.029807621613144875,
+      "ece": 0.004033618680364405
+    },
+    "bundle_sha256": "69b25eacc03dc85a332420db1e6743e14467cbd6074d35876c1718c65322f463"
+  },
+  {
+    "fold": 3,
+    "candidate": "tree_regularized",
+    "seed": 11,
+    "training": {
+      "trees": 250
+    },
+    "fit_seconds": 2.4841578079999636,
+    "prediction_seconds": 0.05796245400006228,
+    "raw_metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.13365031040315856,
+      "precision_at_k": 0.34,
+      "k": 100,
+      "recall_at_k": 0.029539530842745437,
+      "recall_at_1pct_fpr": 0.09904430929626412,
+      "fraud_value_captured": 7840.898999999999,
+      "fraud_value_fraction": 0.041789692732915995,
+      "brier": 0.02959940768778324,
+      "ece": 0.0026185576880638937
+    },
+    "metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.13365031040315856,
+      "precision_at_k": 0.34,
+      "k": 100,
+      "recall_at_k": 0.029539530842745437,
+      "recall_at_1pct_fpr": 0.09904430929626412,
+      "fraud_value_captured": 7840.898999999999,
+      "fraud_value_fraction": 0.041789692732915995,
+      "brier": 0.029587848111987114,
+      "ece": 0.003359043724495658
+    },
+    "bundle_sha256": "b4fce23077b2755088a18c50fccc220aa1f00bc57306700f01b5d278ef521afd"
+  },
+  {
+    "fold": 3,
+    "candidate": "tree_regularized",
+    "seed": 29,
+    "training": {
+      "trees": 250
+    },
+    "fit_seconds": 2.545473262000087,
+    "prediction_seconds": 0.0744530729998587,
+    "raw_metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.13089933073319854,
+      "precision_at_k": 0.37,
+      "k": 100,
+      "recall_at_k": 0.03214596003475239,
+      "recall_at_1pct_fpr": 0.0999131190269331,
+      "fraud_value_captured": 8000.184,
+      "fraud_value_fraction": 0.042638635080848614,
+      "brier": 0.02966274693608284,
+      "ece": 0.0027275325420844897
+    },
+    "metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.1308993307331985,
+      "precision_at_k": 0.37,
+      "k": 100,
+      "recall_at_k": 0.03214596003475239,
+      "recall_at_1pct_fpr": 0.0999131190269331,
+      "fraud_value_captured": 8000.184,
+      "fraud_value_fraction": 0.042638635080848614,
+      "brier": 0.029642021283507347,
+      "ece": 0.0026985718454632973
+    },
+    "bundle_sha256": "4e40c913393634beb132ba7f909d58a242467b445726bc4835428044b6eba0c8"
+  },
+  {
+    "fold": 3,
+    "candidate": "tree_regularized",
+    "seed": 42,
+    "training": {
+      "trees": 250
+    },
+    "fit_seconds": 2.5491988440001023,
+    "prediction_seconds": 0.07411235099993974,
+    "raw_metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.132221542418844,
+      "precision_at_k": 0.34,
+      "k": 100,
+      "recall_at_k": 0.029539530842745437,
+      "recall_at_1pct_fpr": 0.10078192875760209,
+      "fraud_value_captured": 7762.715000000001,
+      "fraud_value_fraction": 0.04137299493632019,
+      "brier": 0.029632568359375,
+      "ece": 0.002189478102003523
+    },
+    "metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.132221542418844,
+      "precision_at_k": 0.34,
+      "k": 100,
+      "recall_at_k": 0.029539530842745437,
+      "recall_at_1pct_fpr": 0.10078192875760209,
+      "fraud_value_captured": 7762.715000000001,
+      "fraud_value_fraction": 0.04137299493632019,
+      "brier": 0.02961193583905697,
+      "ece": 0.0028489266043495907
+    },
+    "bundle_sha256": "b9f7cb27b8f478bf073dbad94d32ba9e2811ad4ddcc29da3cdf05f3f8b162428"
+  },
+  {
+    "fold": 3,
+    "candidate": "sage_reference",
+    "seed": 11,
+    "training": {
+      "best_epoch": 40,
+      "epochs_completed": 40
+    },
+    "fit_seconds": 60.456830542000034,
+    "prediction_seconds": 0.2757552919999853,
+    "raw_metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.12693698200211917,
+      "precision_at_k": 0.34,
+      "k": 100,
+      "recall_at_k": 0.029539530842745437,
+      "recall_at_1pct_fpr": 0.08861859252823631,
+      "fraud_value_captured": 7769.335000000001,
+      "fraud_value_fraction": 0.04140827759534844,
+      "brier": 0.22759695927567677,
+      "ece": 0.41439155774793485
+    },
+    "metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.12693698200211917,
+      "precision_at_k": 0.34,
+      "k": 100,
+      "recall_at_k": 0.029539530842745437,
+      "recall_at_1pct_fpr": 0.08861859252823631,
+      "fraud_value_captured": 7769.335000000001,
+      "fraud_value_fraction": 0.04140827759534844,
+      "brier": 0.02984239098659565,
+      "ece": 0.004695399411779942
+    },
+    "bundle_sha256": "1bd5dd2591e8cb2f57fe79d704223ccd08fafae3b610be1491672bcfbe922312"
+  },
+  {
+    "fold": 3,
+    "candidate": "sage_unweighted",
+    "seed": 11,
+    "training": {
+      "best_epoch": 17,
+      "epochs_completed": 27
+    },
+    "fit_seconds": 40.556443429999945,
+    "prediction_seconds": 0.31486423699993793,
+    "raw_metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.09353777077216552,
+      "precision_at_k": 0.21,
+      "k": 100,
+      "recall_at_k": 0.018245004344048653,
+      "recall_at_1pct_fpr": 0.06168549087749783,
+      "fraud_value_captured": 703.7139999999999,
+      "fraud_value_fraction": 0.003750589292356813,
+      "brier": 0.030760368816603153,
+      "ece": 0.02117274457367528
+    },
+    "metrics": {
+      "n": 35731,
+      "positives": 1151,
+      "pr_auc": 0.09353777077216552,
+      "precision_at_k": 0.21,
+      "k": 100,
+      "recall_at_k": 0.018245004344048653,
+      "recall_at_1pct_fpr": 0.06168549087749783,
+      "fraud_value_captured": 703.7139999999999,
+      "fraud_value_fraction": 0.003750589292356813,
+      "brier": 0.03032366138402288,
+      "ece": 0.005696009108687278
+    },
+    "bundle_sha256": "45f0d6caeeb7630c588b2bbaa930abcc17cb0b25f0a2d6c07c0dc27ae7adc9ab"
+  }
+]

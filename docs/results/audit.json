@@ -1,0 +1,34 @@
+{
+  "rows": 1800,
+  "sha256": "5e6345e43e323a9264b20f2353fe43fe2967e9d2871dbe5b7b4502d917dc7a30",
+  "time_range": [
+    0.0,
+    539700.0
+  ],
+  "fraud_rate": 0.08166666666666667,
+  "missingness": {
+    "id": 0.0,
+    "time": 0.0,
+    "amount": 0.0,
+    "label": 0.0,
+    "account": 0.0,
+    "card": 0.0,
+    "device": 0.03666666666666667,
+    "address": 0.0,
+    "merchant": 0.0
+  },
+  "amount_quantiles": {
+    "0.0": 3.99,
+    "0.5": 62.32,
+    "0.95": 255.8295,
+    "1.0": 1136.76
+  },
+  "identifiers": {
+    "account": 286,
+    "card": 292,
+    "device": 155,
+    "address": 35,
+    "merchant": 24
+  },
+  "label_delay": "Not observed; labels are offline targets and never history features."
+}

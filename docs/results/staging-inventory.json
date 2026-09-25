@@ -1,0 +1,16 @@
+{
+  "api_image_source_files_verified": 38,
+  "frozen_bundle_sha256": {
+    "release": "ab4ad15da827e655df13aeec73654bc0d9b9b63a650e1c901ad56b3289f9d103",
+    "ieee-cohort-10000": "144576b8b0a59383b81c11e0cb192884adb986cd3aa80f12bfe6a75ecd1650c3",
+    "ieee-full-tabular": "c0d2334c114e9db3f2584b43446380dfdc71ea4cc9e5005b1207ecbc777f227a",
+    "scaling/full-gnn": "c5c104f1ae0a111928c53fef437fa7cdda6fe41ad5aa5f5f70f2d514b695e2d3",
+    "staging-model-v2": "8459ed9c3cab56e09364ff3cb0e482e784705f315173dacfc09309eec98ac4c5"
+  },
+  "private_files_eligible": false,
+  "git_remotes": [],
+  "images": {
+    "fraudgraph-staging-api:v2": "sha256:ee1b0ea8c4a7c48e7a18a5f131e39e33832166dd7185dc3e92ea1d833781dd36",
+    "fraudgraph-staging-web:v2": "sha256:7a228cc1411b673fa7b3626054029aa4d386cec99e51fc9971a814614f4f0c8a"
+  }
+}

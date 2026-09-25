@@ -1,0 +1,159 @@
+{
+  "slices": {
+    "amount_below_100": {
+      "n": 1170,
+      "positives": 22,
+      "pr_auc": 0.14003501945746705,
+      "precision_at_k": 0.1,
+      "k": 100,
+      "recall_at_k": 0.45454545454545453,
+      "recall_at_1pct_fpr": 0.13636363636363635,
+      "fraud_value_captured": 507.70799999999997,
+      "fraud_value_fraction": 0.4112341203114217,
+      "brier": 0.01743009260072389,
+      "ece": 0.0053648011136252765
+    },
+    "amount_at_least_100": {
+      "n": 826,
+      "positives": 18,
+      "pr_auc": 0.02455229831422589,
+      "precision_at_k": 0.02,
+      "k": 100,
+      "recall_at_k": 0.1111111111111111,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 426.0,
+      "fraud_value_fraction": 0.12012045882631596,
+      "brier": 0.02176808599942205,
+      "ece": 0.006389737788498251
+    },
+    "missing_identifier": {
+      "n": 1996,
+      "positives": 40,
+      "pr_auc": 0.07432307489533281,
+      "precision_at_k": 0.08,
+      "k": 100,
+      "recall_at_k": 0.2,
+      "recall_at_1pct_fpr": 0.075,
+      "fraud_value_captured": 452.90700000000004,
+      "fraud_value_fraction": 0.09472988699520356,
+      "brier": 0.0192252742376601,
+      "ece": 0.0054893175797863306
+    },
+    "complete_identifiers": {
+      "n": 0,
+      "pr_auc": null
+    },
+    "first_half": {
+      "n": 998,
+      "positives": 24,
+      "pr_auc": 0.10041821723899437,
+      "precision_at_k": 0.04,
+      "k": 100,
+      "recall_at_k": 0.16666666666666666,
+      "recall_at_1pct_fpr": 0.08333333333333333,
+      "fraud_value_captured": 150.748,
+      "fraud_value_fraction": 0.05113242439084617,
+      "brier": 0.023159361953874434,
+      "ece": 0.010050521250792165
+    },
+    "second_half": {
+      "n": 998,
+      "positives": 16,
+      "pr_auc": 0.0886268109737534,
+      "precision_at_k": 0.07,
+      "k": 100,
+      "recall_at_k": 0.4375,
+      "recall_at_1pct_fpr": 0.0625,
+      "fraud_value_captured": 404.571,
+      "fraud_value_fraction": 0.22073352509318833,
+      "brier": 0.015291186521445774,
+      "ece": 0.002382761294477212
+    },
+    "unseen_account": {
+      "n": 1135,
+      "positives": 22,
+      "pr_auc": 0.04903264890470365,
+      "precision_at_k": 0.02,
+      "k": 100,
+      "recall_at_k": 0.09090909090909091,
+      "recall_at_1pct_fpr": 0.045454545454545456,
+      "fraud_value_captured": 56.19,
+      "fraud_value_fraction": 0.017869255816571564,
+      "brier": 0.019104459228203953,
+      "ece": 0.005048548777388597
+    },
+    "unseen_card": {
+      "n": 379,
+      "positives": 1,
+      "pr_auc": 0.004464285714285714,
+      "precision_at_k": 0.0,
+      "k": 100,
+      "recall_at_k": 0.0,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 0.0,
+      "fraud_value_fraction": 0.0,
+      "brier": 0.003427105624221667,
+      "ece": 0.015112142724370902
+    },
+    "unseen_device": {
+      "n": 34,
+      "positives": 2,
+      "pr_auc": 0.6666666666666666,
+      "precision_at_k": 0.058823529411764705,
+      "k": 34,
+      "recall_at_k": 1.0,
+      "recall_at_1pct_fpr": 0.5,
+      "fraud_value_captured": 28.276,
+      "fraud_value_fraction": 1.0,
+      "brier": 0.04780577001156053,
+      "ece": 0.025954424693662347
+    },
+    "unseen_address": {
+      "n": 0,
+      "pr_auc": null
+    },
+    "unseen_merchant": {
+      "n": 0,
+      "pr_auc": null
+    },
+    "sparse_device": {
+      "n": 1605,
+      "positives": 30,
+      "pr_auc": 0.057601672016975,
+      "precision_at_k": 0.04,
+      "k": 100,
+      "recall_at_k": 0.13333333333333333,
+      "recall_at_1pct_fpr": 0.06666666666666667,
+      "fraud_value_captured": 90.75,
+      "fraud_value_fraction": 0.022829384625447154,
+      "brier": 0.018131036298055566,
+      "ece": 0.005097519922687262
+    },
+    "dense_device": {
+      "n": 391,
+      "positives": 10,
+      "pr_auc": 0.12793567692377283,
+      "precision_at_k": 0.07,
+      "k": 100,
+      "recall_at_k": 0.7,
+      "recall_at_1pct_fpr": 0.1,
+      "fraud_value_captured": 464.56899999999996,
+      "fraud_value_fraction": 0.5764627197554026,
+      "brier": 0.023716967058798936,
+      "ece": 0.007644071044948023
+    }
+  },
+  "error_review": {
+    "false_positives": {
+      "available": 92,
+      "reviewed": 25,
+      "zero_prior_device_events": 10
+    },
+    "false_negatives": {
+      "available": 32,
+      "reviewed": 25,
+      "zero_prior_device_events": 22
+    }
+  },
+  "caveat": "Validation includes model-selection and calibration-fit rows; descriptive only."
+}

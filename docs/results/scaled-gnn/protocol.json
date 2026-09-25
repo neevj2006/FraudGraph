@@ -1,0 +1,16 @@
+{
+  "cache": "artifacts/scaling/cache-590540",
+  "dataset_sha256": "5da8963753afe3213a977c68e96c5df3de21c74c82c0a9090870f792008acea8",
+  "rows": 590540,
+  "epochs": 100,
+  "batch_size": 1024,
+  "seeds": [
+    11,
+    29,
+    42
+  ],
+  "optimizer": "Full-training-target gradient accumulation; one Adam step per epoch",
+  "test_disclosure": "Full-data tabular test has previously been inspected; graph training/selection uses training and validation only; final comparison is not a newly blind holdout",
+  "code_sha256": "41fcbf90d470478f7780d005614ff87223259dfb5f3b4b824b58d20326443793",
+  "benchmark_only": false
+}

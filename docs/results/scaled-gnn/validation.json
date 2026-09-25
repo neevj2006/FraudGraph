@@ -1,0 +1,63 @@
+{
+  "runs": [
+    {
+      "model": "sage",
+      "seed": 11,
+      "best_epoch": 98,
+      "epochs_completed": 100,
+      "validation_ap": 0.20009500996826493,
+      "seconds": 457.38736300799997,
+      "rss_after_bytes": 629104640
+    },
+    {
+      "model": "rgcn",
+      "seed": 11,
+      "best_epoch": 100,
+      "epochs_completed": 100,
+      "validation_ap": 0.19032759179785208,
+      "seconds": 103.13517121999996,
+      "rss_after_bytes": 789291008
+    },
+    {
+      "model": "sage",
+      "seed": 29,
+      "best_epoch": 100,
+      "epochs_completed": 100,
+      "validation_ap": 0.18961599469215834,
+      "seconds": 446.1673054050001,
+      "rss_after_bytes": 789221376
+    },
+    {
+      "model": "rgcn",
+      "seed": 29,
+      "best_epoch": 98,
+      "epochs_completed": 100,
+      "validation_ap": 0.2070513363343434,
+      "seconds": 93.77032559400004,
+      "rss_after_bytes": 789221376
+    },
+    {
+      "model": "sage",
+      "seed": 42,
+      "best_epoch": 99,
+      "epochs_completed": 100,
+      "validation_ap": 0.2055075445647369,
+      "seconds": 456.442049194,
+      "rss_after_bytes": 789221376
+    },
+    {
+      "model": "rgcn",
+      "seed": 42,
+      "best_epoch": 79,
+      "epochs_completed": 94,
+      "validation_ap": 0.19651168755664383,
+      "seconds": 90.47817131099987,
+      "rss_after_bytes": 789291008
+    }
+  ],
+  "mean_ap": {
+    "sage": 0.19840618307505342,
+    "rgcn": 0.19796353856294643
+  },
+  "selected": "sage"
+}

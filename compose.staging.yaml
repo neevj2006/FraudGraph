@@ -1,0 +1,70 @@
+name: fraudgraph-staging-v2
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres-password
+    volumes:
+      - staging-postgres:/var/lib/postgresql/data
+      - ./artifacts/staging-v2/postgres-password:/run/secrets/postgres-password:ro
+      - ./artifacts/staging-v2/bootstrap.sql:/docker-entrypoint-initdb.d/10-organizations.sql:ro
+    ports: ["127.0.0.1:55440:5432"]
+    mem_limit: 512m
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      retries: 20
+  api:
+    image: fraudgraph-staging-api:v2
+    build: {context: ., dockerfile: infrastructure/Dockerfile.api}
+    command: ["uvicorn", "services.gateway:factory", "--factory", "--host", "0.0.0.0", "--port", "8000"]
+    environment: &backend
+      FRAUDGRAPH_ORGANIZATIONS_FILE: /run/secrets/organizations.json
+      PYTHONDONTWRITEBYTECODE: "1"
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+    volumes: &backend_volumes
+      - ./artifacts/staging-v2/organizations.json:/run/secrets/organizations.json:ro
+      - ./artifacts/staging-model-v2:/app/artifacts/model:ro
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 2g
+    memswap_limit: 2g
+    ports: ["127.0.0.1:18004:8000"]
+    depends_on:
+      db: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/ready')"]
+      interval: 15s
+      start_period: 120s
+      retries: 20
+  worker:
+    image: fraudgraph-staging-api:v2
+    command: ["python", "-m", "services.inference.organization_worker"]
+    environment: *backend
+    volumes: *backend_volumes
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 2g
+    memswap_limit: 2g
+    depends_on:
+      api: {condition: service_healthy}
+  web:
+    image: fraudgraph-staging-web:v2
+    build: {context: apps/web}
+    environment:
+      API_URL: http://api:8000
+    ports: ["127.0.0.1:13004:3000"]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 512m
+    depends_on:
+      api: {condition: service_healthy}
+volumes:
+  staging-postgres:

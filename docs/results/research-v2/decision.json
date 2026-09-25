@@ -1,0 +1,93 @@
+{
+  "selected": "tree_reference",
+  "tree_choice": "tree_reference",
+  "confirmed_graph_candidates": [],
+  "eligible": [
+    "tree_reference"
+  ],
+  "fold_metrics": {
+    "tree_reference": [
+      {
+        "pr_auc": 0.14317421211069215,
+        "precision_at_k": 0.3499999999999999,
+        "brier": 0.03741617500782013,
+        "ece": 0.006569673105367769
+      },
+      {
+        "pr_auc": 0.16564652324279322,
+        "precision_at_k": 0.42,
+        "brier": 0.037087664008140564,
+        "ece": 0.00844388972560398
+      },
+      {
+        "pr_auc": 0.12295435399223427,
+        "precision_at_k": 0.4000000000000001,
+        "brier": 0.029807621613144875,
+        "ece": 0.004033618680364405
+      }
+    ],
+    "tree_regularized": [
+      {
+        "pr_auc": 0.14314864966465687,
+        "precision_at_k": 0.32,
+        "brier": 0.037560392171144485,
+        "ece": 0.007797735761336968
+      },
+      {
+        "pr_auc": 0.15953358211202803,
+        "precision_at_k": 0.3433333333333333,
+        "brier": 0.037053742756446205,
+        "ece": 0.006950373463592184
+      },
+      {
+        "pr_auc": 0.132257061185067,
+        "precision_at_k": 0.35000000000000003,
+        "brier": 0.02961393507818381,
+        "ece": 0.0029688473914361822
+      }
+    ],
+    "sage_reference": [
+      {
+        "pr_auc": 0.10114607535347853,
+        "precision_at_k": 0.1,
+        "brier": 0.03823274433824964,
+        "ece": 0.008291830344260849
+      },
+      {
+        "pr_auc": 0.1021726753163198,
+        "precision_at_k": 0.18,
+        "brier": 0.038341545345146485,
+        "ece": 0.008407630902339583
+      },
+      {
+        "pr_auc": 0.12693698200211917,
+        "precision_at_k": 0.34,
+        "brier": 0.02984239098659565,
+        "ece": 0.004695399411779942
+      }
+    ],
+    "sage_unweighted": [
+      {
+        "pr_auc": 0.09303323756740461,
+        "precision_at_k": 0.1,
+        "brier": 0.03810684876433715,
+        "ece": 0.0049745445554340685
+      },
+      {
+        "pr_auc": 0.10894075095659392,
+        "precision_at_k": 0.2,
+        "brier": 0.037947825605757435,
+        "ece": 0.007760803278870135
+      },
+      {
+        "pr_auc": 0.09353777077216552,
+        "precision_at_k": 0.21,
+        "brier": 0.03032366138402288,
+        "ece": 0.005696009108687278
+      }
+    ]
+  },
+  "run_count": 24,
+  "source_sha256": "d3b434ecf346560b90d3170968c68aade3ade19c2ce8ecfe9759a1190d12ed75",
+  "scope": "Development choice for staging; not independent production acceptance"
+}

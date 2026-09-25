@@ -1,0 +1,57 @@
+{
+  "method": "Exact capped-eight earlier-neighbor and snapshot counts; equal timestamps update together; outcome labels not loaded",
+  "training_validation_cutoff_exclusive": 12236983.0,
+  "training_validation": {
+    "transactions": 473187,
+    "projected_edges_by_relation": {
+      "account": 2428177,
+      "card": 3468729,
+      "device": 901429,
+      "address": 3346198,
+      "merchant": 0
+    },
+    "entity_snapshots_by_relation": {
+      "account": 392202,
+      "card": 459431,
+      "device": 116063,
+      "address": 418922,
+      "merchant": 0
+    },
+    "projected_edges": 10144533,
+    "heterogeneous_edges": 11531151,
+    "heterogeneous_nodes": 1859805,
+    "projected_edge_index_and_relation_bytes": 243468792,
+    "heterogeneous_edge_index_and_relation_bytes": 276747624,
+    "heterogeneous_input_features_bytes": 141345180,
+    "one_hidden_state_bytes": 178541280,
+    "one_all_edge_hidden_message_tensor_bytes": 1106990496,
+    "largest_relation_hidden_message_tensor_bytes": 332997984
+  },
+  "full_inference": {
+    "transactions": 590540,
+    "projected_edges_by_relation": {
+      "account": 3175696,
+      "card": 4377130,
+      "device": 1080509,
+      "address": 4189779,
+      "merchant": 0
+    },
+    "entity_snapshots_by_relation": {
+      "account": 500162,
+      "card": 575695,
+      "device": 138913,
+      "address": 524397,
+      "merchant": 0
+    },
+    "projected_edges": 12823114,
+    "heterogeneous_edges": 14562281,
+    "heterogeneous_nodes": 2329707,
+    "projected_edge_index_and_relation_bytes": 307754736,
+    "heterogeneous_edge_index_and_relation_bytes": 349494744,
+    "heterogeneous_input_features_bytes": 177057732,
+    "one_hidden_state_bytes": 223651872,
+    "one_all_edge_hidden_message_tensor_bytes": 1397978976,
+    "largest_relation_hidden_message_tensor_bytes": 420204480
+  },
+  "memory_caveat": "Calculated tensor sizes, not measured peak RAM. Allocations need not coexist; relation-wise execution may use smaller message tensors. Python graph construction, autograd, optimizer, allocator and library overhead are excluded. No model fitting or holdout metrics."
+}

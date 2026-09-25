@@ -1,0 +1,82 @@
+{
+  "version": "f16663bdd7621c76",
+  "window": "validation (descriptive, includes calibration fit)",
+  "note": "RSS includes Python, imported libraries and all loaded models; not incremental model memory or a peak measurement.",
+  "perturbations": {
+    "unchanged": {
+      "n": 360,
+      "positives": 28,
+      "pr_auc": 0.5517269904424855,
+      "precision_at_k": 0.22,
+      "k": 100,
+      "recall_at_k": 0.7857142857142857,
+      "recall_at_1pct_fpr": 0.2857142857142857,
+      "fraud_value_captured": 3256.86,
+      "fraud_value_fraction": 0.8519945691840435,
+      "brier": 0.048966668764945306,
+      "ece": 0.04287818566473808,
+      "all_model_batch_ms": 779.2668000329286,
+      "process_rss_bytes_after_call": 565362688
+    },
+    "20pct_missing_signatures": {
+      "n": 360,
+      "positives": 28,
+      "pr_auc": 0.1899209567183308,
+      "precision_at_k": 0.17,
+      "k": 100,
+      "recall_at_k": 0.6071428571428571,
+      "recall_at_1pct_fpr": 0.03571428571428571,
+      "fraud_value_captured": 2410.77,
+      "fraud_value_fraction": 0.6306574269547406,
+      "brier": 0.07518775825350181,
+      "ece": 0.039996446007161394,
+      "all_model_batch_ms": 472.7424999582581,
+      "process_rss_bytes_after_call": 566194176
+    },
+    "10pct_shared_device_hub": {
+      "n": 360,
+      "positives": 28,
+      "pr_auc": 0.536674598079115,
+      "precision_at_k": 0.23,
+      "k": 100,
+      "recall_at_k": 0.8214285714285714,
+      "recall_at_1pct_fpr": 0.32142857142857145,
+      "fraud_value_captured": 3303.38,
+      "fraud_value_fraction": 0.8641642010866863,
+      "brier": 0.05135289791634757,
+      "ece": 0.033702246742788385,
+      "all_model_batch_ms": 463.9312999788672,
+      "process_rss_bytes_after_call": 568279040
+    },
+    "50pct_amount_shift": {
+      "n": 360,
+      "positives": 28,
+      "pr_auc": 0.5625075035441224,
+      "precision_at_k": 0.22,
+      "k": 100,
+      "recall_at_k": 0.7857142857142857,
+      "recall_at_1pct_fpr": 0.2857142857142857,
+      "fraud_value_captured": 4885.29,
+      "fraud_value_fraction": 0.8519945691840435,
+      "brier": 0.050008003944609115,
+      "ece": 0.035001575732638276,
+      "all_model_batch_ms": 517.0362999779172,
+      "process_rss_bytes_after_call": 568287232
+    },
+    "one_hour_time_shift": {
+      "n": 360,
+      "positives": 28,
+      "pr_auc": 0.541696412365577,
+      "precision_at_k": 0.22,
+      "k": 100,
+      "recall_at_k": 0.7857142857142857,
+      "recall_at_1pct_fpr": 0.2857142857142857,
+      "fraud_value_captured": 3256.86,
+      "fraud_value_fraction": 0.8519945691840435,
+      "brier": 0.04877667331413046,
+      "ece": 0.033709781863586016,
+      "all_model_batch_ms": 492.3075999831781,
+      "process_rss_bytes_after_call": 568672256
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.venv
+apps
+/data
+/artifacts
+.git
+.env
+__pycache__

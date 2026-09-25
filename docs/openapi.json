@@ -1,0 +1,1465 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FraudGraph",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ready": {
+      "get": {
+        "summary": "Ready",
+        "operationId": "ready_ready_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/model": {
+      "get": {
+        "summary": "Model",
+        "operationId": "model_v1_model_get",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/session": {
+      "get": {
+        "summary": "Session Identity",
+        "operationId": "session_identity_v1_session_get",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/metrics": {
+      "get": {
+        "summary": "Operational Metrics",
+        "operationId": "operational_metrics_v1_metrics_get",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/alerts": {
+      "get": {
+        "summary": "Alerts",
+        "operationId": "alerts_v1_alerts_get",
+        "parameters": [
+          {
+            "name": "min_score",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "maximum": 1,
+              "minimum": 0,
+              "default": 0,
+              "title": "Min Score"
+            }
+          },
+          {
+            "name": "min_amount",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "minimum": 0,
+              "default": 0,
+              "title": "Min Amount"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "After"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Before"
+            }
+          },
+          {
+            "name": "entity_type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^(account|card|device|address|merchant)$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Entity Type"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 500,
+              "minimum": 1,
+              "default": 100,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AlertQueue"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/alerts/{alert_id}": {
+      "get": {
+        "summary": "Detail",
+        "operationId": "detail_v1_alerts__alert_id__get",
+        "parameters": [
+          {
+            "name": "alert_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Alert Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AlertDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/alerts/{alert_id}/graph": {
+      "get": {
+        "summary": "Graph",
+        "operationId": "graph_v1_alerts__alert_id__graph_get",
+        "parameters": [
+          {
+            "name": "alert_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Alert Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvidenceGraph"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/alerts/{alert_id}/case": {
+      "post": {
+        "summary": "Change Case",
+        "operationId": "change_case_v1_alerts__alert_id__case_post",
+        "parameters": [
+          {
+            "name": "alert_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Alert Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CaseChange"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseRecord"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/cases": {
+      "get": {
+        "summary": "Cases",
+        "operationId": "cases_v1_cases_get",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseList"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/cases/{case_id}/export": {
+      "get": {
+        "summary": "Export",
+        "operationId": "export_v1_cases__case_id__export_get",
+        "parameters": [
+          {
+            "name": "case_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Case Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/audit": {
+      "get": {
+        "summary": "Audit",
+        "operationId": "audit_v1_audit_get",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/entities/{entity_id}": {
+      "get": {
+        "summary": "Entity",
+        "operationId": "entity_v1_entities__entity_id__get",
+        "parameters": [
+          {
+            "name": "entity_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Entity Id"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 100,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/jobs": {
+      "post": {
+        "summary": "Submit",
+        "operationId": "submit_v1_jobs_post",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Batch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/jobs/{job_id}": {
+      "get": {
+        "summary": "Job",
+        "operationId": "job_v1_jobs__job_id__get",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Job Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AlertDetail": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "score": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Score"
+          },
+          "baseline_score": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Baseline Score"
+          },
+          "graph_score": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Graph Score"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "cutoff": {
+            "type": "number",
+            "title": "Cutoff"
+          },
+          "confidence": {
+            "type": "string",
+            "title": "Confidence"
+          },
+          "amount": {
+            "type": "number",
+            "title": "Amount"
+          },
+          "time": {
+            "type": "number",
+            "title": "Time"
+          },
+          "model": {
+            "type": "string",
+            "title": "Model"
+          },
+          "dataset": {
+            "type": "string",
+            "title": "Dataset"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "entity_types": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Entity Types"
+          },
+          "case": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CaseRecord"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "notice": {
+            "type": "string",
+            "title": "Notice"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "id",
+          "score",
+          "baseline_score",
+          "graph_score",
+          "model_version",
+          "cutoff",
+          "confidence",
+          "amount",
+          "time",
+          "model",
+          "dataset",
+          "status",
+          "entity_types",
+          "case",
+          "notice"
+        ],
+        "title": "AlertDetail"
+      },
+      "AlertQueue": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "title": "Schema Version"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/AlertScore"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "summary": {
+            "$ref": "#/components/schemas/QueueSummary"
+          }
+        },
+        "type": "object",
+        "required": [
+          "schema_version",
+          "total",
+          "items",
+          "summary"
+        ],
+        "title": "AlertQueue"
+      },
+      "AlertScore": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "score": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Score"
+          },
+          "baseline_score": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Baseline Score"
+          },
+          "graph_score": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Graph Score"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "cutoff": {
+            "type": "number",
+            "title": "Cutoff"
+          },
+          "confidence": {
+            "type": "string",
+            "title": "Confidence"
+          },
+          "amount": {
+            "type": "number",
+            "title": "Amount"
+          },
+          "time": {
+            "type": "number",
+            "title": "Time"
+          },
+          "model": {
+            "type": "string",
+            "title": "Model"
+          },
+          "dataset": {
+            "type": "string",
+            "title": "Dataset"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "entity_types": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Entity Types"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "id",
+          "score",
+          "baseline_score",
+          "graph_score",
+          "model_version",
+          "cutoff",
+          "confidence",
+          "amount",
+          "time",
+          "model",
+          "dataset",
+          "status",
+          "entity_types"
+        ],
+        "title": "AlertScore"
+      },
+      "Batch": {
+        "properties": {
+          "events": {
+            "items": {
+              "$ref": "#/components/schemas/Event"
+            },
+            "type": "array",
+            "maxItems": 500,
+            "minItems": 1,
+            "title": "Events"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "events"
+        ],
+        "title": "Batch"
+      },
+      "CaseChange": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "investigating",
+              "escalated",
+              "dismissed",
+              "confirmed"
+            ],
+            "title": "Status",
+            "default": "investigating"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Note"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "note"
+        ],
+        "title": "CaseChange"
+      },
+      "CaseList": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/CaseRecord"
+            },
+            "type": "array",
+            "title": "Items"
+          }
+        },
+        "type": "object",
+        "required": [
+          "items"
+        ],
+        "title": "CaseList"
+      },
+      "CaseRecord": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "alert_id": {
+            "type": "string",
+            "title": "Alert Id"
+          },
+          "owner": {
+            "type": "string",
+            "title": "Owner"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/NoteRecord"
+            },
+            "type": "array",
+            "title": "Notes"
+          },
+          "updated": {
+            "type": "string",
+            "title": "Updated"
+          },
+          "revision": {
+            "type": "integer",
+            "title": "Revision"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "alert_id",
+          "owner",
+          "status",
+          "notes",
+          "updated",
+          "revision"
+        ],
+        "title": "CaseRecord"
+      },
+      "Event": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.-]+$",
+            "title": "Id"
+          },
+          "time": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Time"
+          },
+          "amount": {
+            "type": "number",
+            "maximum": 1000000000000.0,
+            "minimum": 0.0,
+            "title": "Amount"
+          },
+          "account": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 256
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Account"
+          },
+          "card": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 256
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Card"
+          },
+          "device": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 256
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Device"
+          },
+          "address": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 256
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Address"
+          },
+          "merchant": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 256
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Merchant"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "time",
+          "amount"
+        ],
+        "title": "Event"
+      },
+      "EvidenceEdge": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source"
+          },
+          "target": {
+            "type": "string",
+            "title": "Target"
+          },
+          "type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "time": {
+            "type": "number",
+            "title": "Time"
+          },
+          "provenance": {
+            "type": "string",
+            "title": "Provenance"
+          },
+          "rule": {
+            "type": "string",
+            "title": "Rule"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "source",
+          "target",
+          "type",
+          "time",
+          "provenance",
+          "rule"
+        ],
+        "title": "EvidenceEdge"
+      },
+      "EvidenceGraph": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "title": "Schema Version"
+          },
+          "cutoff": {
+            "type": "number",
+            "title": "Cutoff"
+          },
+          "nodes": {
+            "items": {
+              "$ref": "#/components/schemas/EvidenceNode"
+            },
+            "type": "array",
+            "title": "Nodes"
+          },
+          "edges": {
+            "items": {
+              "$ref": "#/components/schemas/EvidenceEdge"
+            },
+            "type": "array",
+            "title": "Edges"
+          },
+          "patterns": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Patterns"
+          },
+          "truncated": {
+            "type": "boolean",
+            "title": "Truncated"
+          },
+          "historical_transactions": {
+            "type": "integer",
+            "title": "Historical Transactions"
+          },
+          "attribution": {
+            "type": "string",
+            "title": "Attribution"
+          }
+        },
+        "type": "object",
+        "required": [
+          "schema_version",
+          "cutoff",
+          "nodes",
+          "edges",
+          "patterns",
+          "truncated",
+          "historical_transactions",
+          "attribution"
+        ],
+        "title": "EvidenceGraph"
+      },
+      "EvidenceNode": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "transaction",
+              "account",
+              "card",
+              "device",
+              "address",
+              "merchant"
+            ],
+            "title": "Type"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "focal": {
+            "type": "boolean",
+            "title": "Focal"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "label",
+          "focal"
+        ],
+        "title": "EvidenceNode"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "NoteRecord": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "actor": {
+            "type": "string",
+            "title": "Actor"
+          },
+          "time": {
+            "type": "string",
+            "title": "Time"
+          }
+        },
+        "type": "object",
+        "required": [
+          "text",
+          "actor",
+          "time"
+        ],
+        "title": "NoteRecord"
+      },
+      "QueueSummary": {
+        "properties": {
+          "open": {
+            "type": "integer",
+            "title": "Open"
+          },
+          "high_risk": {
+            "type": "integer",
+            "title": "High Risk"
+          },
+          "flagged_value": {
+            "type": "number",
+            "title": "Flagged Value"
+          }
+        },
+        "type": "object",
+        "required": [
+          "open",
+          "high_risk",
+          "flagged_value"
+        ],
+        "title": "QueueSummary"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "transaction_nodes": 1440,
+  "unique_entity_signatures": {
+    "account": 248,
+    "card": 251,
+    "device": 135,
+    "address": 35,
+    "merchant": 24
+  },
+  "causal_projection_edges": 38184,
+  "edges_by_relation": {
+    "account": 5052,
+    "card": 5072,
+    "device": 7144,
+    "address": 10260,
+    "merchant": 10656
+  },
+  "isolated_transactions": 0,
+  "weak_components": 1,
+  "degree_quantiles": {
+    "0": 16.0,
+    "0.5": 40.0,
+    "0.95": 57.0,
+    "1": 69.0
+  },
+  "max_source_time_violation": false,
+  "highest_degree_transactions": [
+    {
+      "id": "TX-000549",
+      "degree": 69
+    },
+    {
+      "id": "TX-000792",
+      "degree": 69
+    },
+    {
+      "id": "TX-000478",
+      "degree": 67
+    },
+    {
+      "id": "TX-000491",
+      "degree": 67
+    },
+    {
+      "id": "TX-000594",
+      "degree": 67
+    },
+    {
+      "id": "TX-000754",
+      "degree": 67
+    },
+    {
+      "id": "TX-000907",
+      "degree": 67
+    },
+    {
+      "id": "TX-000931",
+      "degree": 67
+    },
+    {
+      "id": "TX-000431",
+      "degree": 66
+    },
+    {
+      "id": "TX-000530",
+      "degree": 66
+    }
+  ]
+}

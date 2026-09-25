@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-20",
+  "backend": {
+    "passed": 52,
+    "skipped": 0,
+    "postgresql": true
+  },
+  "browser": {
+    "organization_workflow_passed": true
+  },
+  "lint": "passed",
+  "format": "passed",
+  "typescript": "passed",
+  "production_builds": [
+    "api",
+    "web"
+  ],
+  "python_dependency_compatibility": "passed",
+  "npm_production_vulnerabilities": 0,
+  "security_scan": {
+    "source_scope": "services",
+    "pre_remediation_findings": 2,
+    "severity": "low",
+    "remediated": [
+      "indexed paginated entity queries",
+      "atomic aggregate job quotas"
+    ]
+  },
+  "hosted_production_acceptance": false
+}

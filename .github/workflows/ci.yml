@@ -1,0 +1,81 @@
+name: Verify
+on: [push, pull_request]
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: fraudgraph
+          POSTGRES_PASSWORD: ci-only-password
+          POSTGRES_DB: fraudgraph_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U fraudgraph"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      TEST_POSTGRES_URL: postgresql+psycopg://fraudgraph:ci-only-password@localhost:5432/fraudgraph_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with: {enable-cache: true}
+      - run: uv sync --frozen --python 3.12
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run pytest -q
+      - run: uv run python -m ml.pipeline demo --out artifacts/ci --epochs 8 --rows 900
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 24, cache: npm, cache-dependency-path: apps/web/package-lock.json}
+      - run: npm ci
+        working-directory: apps/web
+      - run: npm run typecheck
+        working-directory: apps/web
+      - run: npm run build
+        working-directory: apps/web
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with: {enable-cache: true}
+      - uses: actions/setup-node@v4
+        with: {node-version: 24, cache: npm, cache-dependency-path: apps/web/package-lock.json}
+      - run: uv sync --frozen --python 3.12
+      - run: uv run python -m ml.pipeline demo --out artifacts/release --epochs 100
+      - run: npm ci
+        working-directory: apps/web
+      - run: npm run build
+        working-directory: apps/web
+      - run: npx playwright install --with-deps chromium
+        working-directory: apps/web
+      - name: Start local services
+        run: |
+          uv run uvicorn services.api.main:app --host 127.0.0.1 --port 8000 > /tmp/fraudgraph-api.log 2>&1 &
+          cd apps/web
+          npm start > /tmp/fraudgraph-web.log 2>&1 &
+      - name: Wait for readiness
+        run: |
+          python - <<'PY'
+          import time, urllib.request
+          for url in ('http://127.0.0.1:8000/ready', 'http://127.0.0.1:3000'):
+              for attempt in range(60):
+                  try:
+                      urllib.request.urlopen(url, timeout=2)
+                      break
+                  except Exception:
+                      time.sleep(1)
+              else:
+                  raise RuntimeError(f'Service unavailable: {url}')
+          PY
+      - run: npm run test:e2e
+        working-directory: apps/web
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-evidence
+          path: apps/web/test-results

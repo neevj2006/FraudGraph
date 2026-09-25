@@ -1,0 +1,110 @@
+{
+  "selected": "sage",
+  "metrics": {
+    "sage": {
+      "n": 117353,
+      "positives": 4025,
+      "pr_auc": 0.10925279249281927,
+      "precision_at_k": 0.14,
+      "k": 100,
+      "recall_at_k": 0.0034782608695652175,
+      "recall_at_1pct_fpr": 0.07975155279503106,
+      "fraud_value_captured": 5850.0,
+      "fraud_value_fraction": 0.009685485000553785,
+      "brier": 0.230101592039618,
+      "ece": 0.40732129129402345
+    },
+    "rgcn": {
+      "n": 117353,
+      "positives": 4025,
+      "pr_auc": 0.09345413909362286,
+      "precision_at_k": 0.31,
+      "k": 100,
+      "recall_at_k": 0.007701863354037267,
+      "recall_at_1pct_fpr": 0.0315527950310559,
+      "fraud_value_captured": 11550.0,
+      "fraud_value_fraction": 0.019122624231862603,
+      "brier": 0.20831262097507214,
+      "ece": 0.3733829007476583
+    },
+    "calibrated": {
+      "n": 117353,
+      "positives": 4025,
+      "pr_auc": 0.10925279249281927,
+      "precision_at_k": 0.14,
+      "k": 100,
+      "recall_at_k": 0.0034782608695652175,
+      "recall_at_1pct_fpr": 0.07975155279503106,
+      "fraud_value_captured": 5850.0,
+      "fraud_value_fraction": 0.009685485000553785,
+      "brier": 0.03201855707807671,
+      "ece": 0.002869415673482894
+    }
+  },
+  "unseen": {
+    "account": {
+      "n": 17335,
+      "positives": 602,
+      "pr_auc": 0.07923140859389521,
+      "precision_at_k": 0.16,
+      "k": 100,
+      "recall_at_k": 0.026578073089700997,
+      "recall_at_1pct_fpr": 0.05149501661129568,
+      "fraud_value_captured": 6659.0,
+      "fraud_value_fraction": 0.04947457282971027,
+      "brier": 0.034209984214768493,
+      "ece": 0.009638713472738267
+    },
+    "card": {
+      "n": 2427,
+      "positives": 94,
+      "pr_auc": 0.1571082997925004,
+      "precision_at_k": 0.25,
+      "k": 100,
+      "recall_at_k": 0.26595744680851063,
+      "recall_at_1pct_fpr": 0.1276595744680851,
+      "fraud_value_captured": 3418.1720000000005,
+      "fraud_value_fraction": 0.3024148976698239,
+      "brier": 0.035015126515742574,
+      "ece": 0.007505399877094278
+    },
+    "device": {
+      "n": 892,
+      "positives": 143,
+      "pr_auc": 0.2792257203066522,
+      "precision_at_k": 0.36,
+      "k": 100,
+      "recall_at_k": 0.2517482517482518,
+      "recall_at_1pct_fpr": 0.006993006993006993,
+      "fraud_value_captured": 2920.398,
+      "fraud_value_fraction": 0.31455783127715586,
+      "brier": 0.1292719779663745,
+      "ece": 0.04924315928144638
+    },
+    "address": {
+      "n": 32,
+      "positives": 4,
+      "pr_auc": 0.089618682722131,
+      "precision_at_k": 0.125,
+      "k": 32,
+      "recall_at_k": 1.0,
+      "recall_at_1pct_fpr": 0.0,
+      "fraud_value_captured": 200.0,
+      "fraud_value_fraction": 1.0,
+      "brier": 0.12295045011866806,
+      "ece": 0.12755050647761648
+    },
+    "merchant": {
+      "n": 0,
+      "pr_auc": null
+    }
+  },
+  "bootstrap": {
+    "lower": 0.10322028090942616,
+    "upper": 0.11589923130239964,
+    "method": "row bootstrap, 400 repeats; does not account for temporal/entity dependence"
+  },
+  "elapsed_seconds": 390.455251976,
+  "rss_after_bytes": 890929152,
+  "test_disclosure": "Same held-out window as previously inspected tabular comparison; not a newly blind evaluation"
+}

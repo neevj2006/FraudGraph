@@ -1,0 +1,28 @@
+{
+  "raw": {
+    "n": 180,
+    "positives": 9,
+    "pr_auc": 0.5666467186326999,
+    "precision_at_k": 0.07,
+    "k": 100,
+    "recall_at_k": 0.7777777777777778,
+    "recall_at_1pct_fpr": 0.3333333333333333,
+    "fraud_value_captured": 914.6099999999999,
+    "fraud_value_fraction": 0.8148989628996042,
+    "brier": 0.23954595192192102,
+    "ece": 0.450525582002269
+  },
+  "calibrated_fit_diagnostic": {
+    "n": 180,
+    "positives": 9,
+    "pr_auc": 0.5666467186326999,
+    "precision_at_k": 0.07,
+    "k": 100,
+    "recall_at_k": 0.7777777777777778,
+    "recall_at_1pct_fpr": 0.3333333333333333,
+    "fraud_value_captured": 914.6099999999999,
+    "fraud_value_fraction": 0.8148989628996042,
+    "brier": 0.030527106970077728,
+    "ece": 0.030900235659396223
+  }
+}

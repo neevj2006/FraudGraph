@@ -1,0 +1,70 @@
+{
+  "source": "https://www.kaggle.com/competitions/ieee-fraud-detection/data",
+  "retrieved_date": "2026-09-13",
+  "license": "Subject to Kaggle competition rules; locally acquired source files; no redistribution",
+  "files": [
+    {
+      "name": "train_transaction.csv",
+      "size": 683351067,
+      "sha256": "3a5c83ab6b3cc13dcabe5ffa9f522307fd5f7f7b6e6f6a60c32284ca6283d642",
+      "projection_columns": [
+        "TransactionID",
+        "TransactionDT",
+        "TransactionAmt",
+        "isFraud",
+        "card1",
+        "card2",
+        "card3",
+        "card5",
+        "addr1",
+        "addr2",
+        "P_emaildomain"
+      ]
+    },
+    {
+      "name": "train_identity.csv",
+      "size": 26529680,
+      "sha256": "b63c725d8377be90a995268d97f347c17d456b95db45807adcf9f59cd603c37c",
+      "projection_columns": [
+        "TransactionID",
+        "DeviceType",
+        "DeviceInfo"
+      ]
+    }
+  ],
+  "transformation": "Read only mapped columns in bounded chunks before applying the unchanged IEEE adapter",
+  "audit": {
+    "rows": 590540,
+    "sha256": "5da8963753afe3213a977c68e96c5df3de21c74c82c0a9090870f792008acea8",
+    "time_range": [
+      86400.0,
+      15811131.0
+    ],
+    "fraud_rate": 0.03499000914417313,
+    "missingness": {
+      "id": 0.0,
+      "time": 0.0,
+      "amount": 0.0,
+      "label": 0.0,
+      "account": 0.0,
+      "card": 0.0,
+      "device": 0.7614810173739289,
+      "address": 0.1112642666034477,
+      "merchant": 1.0
+    },
+    "amount_quantiles": {
+      "0.0": 0.251,
+      "0.5": 68.769,
+      "0.95": 445.0,
+      "1.0": 31937.391
+    },
+    "identifiers": {
+      "account": 90375,
+      "card": 14845,
+      "device": 1942,
+      "address": 437,
+      "merchant": 0
+    },
+    "label_delay": "Not observed; labels are offline targets and never history features."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "rows": 10000,
+  "reference_seconds": 2.121103153000149,
+  "fast_seconds": 0.07235956499994245,
+  "speed_ratio": 29.31337623439052,
+  "maximum_absolute_difference": 0.0,
+  "scope": "Same first 10000 chronological training rows, same process; one timing observation"
+}

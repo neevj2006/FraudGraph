@@ -1,0 +1,32 @@
+import { test, expect } from "@playwright/test";
+
+test.skip(process.env.TEST_DATASET !== "ieee", "Requires the frozen IEEE cohort API");
+test("public cohort investigation, provenance and responsive display", async ({page}) => {
+  const errors: string[] = [];
+  page.on("pageerror", e => errors.push(e.message));
+  await page.goto("/");
+  await page.getByLabel("Analyst access token").fill(process.env.TEST_API_TOKEN || "local-demo-token-change-me");
+  await page.getByRole("button", {name:"Open workspace"}).click();
+  await expect(page.locator(".queue-row").first()).toBeVisible();
+  const total = (await page.locator(".section-title h2 span").innerText()).trim();
+  await expect(page.locator(".topbar")).toContainText("Offline research");
+  await expect(page.locator(".queue-row").first()).not.toContainText("$");
+  await expect(page.locator(".graph-canvas canvas").first()).toBeVisible();
+  await page.getByLabel("Investigation note").fill("Public cohort browser verification: corroborate shared signatures.");
+  await page.getByRole("button", {name:"Save assessment"}).click();
+  await expect(page.getByText("Assessment saved")).toBeVisible();
+  const downloaded = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export case", exact:true}).click();
+  expect((await downloaded).suggestedFilename()).toContain("fraudgraph-case-");
+  await page.getByLabel("Min. value").fill("100000000");
+  await expect(page.getByText("No transactions match these filters.")).toBeVisible();
+  await page.getByLabel("Min. value").fill("");
+  await expect(page.locator(".queue-row").first()).toBeVisible();
+  await page.getByRole("button", {name:"Next page", exact:true}).click();
+  await expect(page.locator(".pagination small")).toContainText(`60 of ${total}`);
+  await page.getByRole("button", {name:"Model registry", exact:true}).click();
+  await expect(page.getByText("IEEE-CIS chronological first-10000 cohort including cutoff ties", {exact:true})).toBeVisible();
+  await page.setViewportSize({width:390,height:844});
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy();
+  expect(errors).toEqual([]);
+});

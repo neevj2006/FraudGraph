@@ -1,0 +1,5 @@
+{
+  "elapsed_seconds": 403.790765717,
+  "sampled_peak_rss_bytes": 1094819840,
+  "method": "Whole-process RSS sampled every 20 ms; excludes OS filesystem cache and may miss shorter peaks"
+}

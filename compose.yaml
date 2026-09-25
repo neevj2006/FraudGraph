@@ -1,0 +1,44 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: fraudgraph
+      POSTGRES_DB: fraudgraph
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+    volumes: ["postgres-data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fraudgraph"]
+      interval: 5s
+      retries: 15
+  api:
+    build: {context: ., dockerfile: infrastructure/Dockerfile.api}
+    environment: &backend
+      FRAUDGRAPH_DATABASE_URL: postgresql+psycopg://fraudgraph:${POSTGRES_PASSWORD}@db:5432/fraudgraph
+      FRAUDGRAPH_ARTIFACT_DIR: /app/artifacts/release
+      FRAUDGRAPH_ENVIRONMENT: staging
+      FRAUDGRAPH_API_TOKEN: ${DEPLOY_API_TOKEN:?Set DEPLOY_API_TOKEN to a random token}
+    volumes: ["./artifacts:/app/artifacts:ro"]
+    depends_on:
+      db: {condition: service_healthy}
+    ports: ["127.0.0.1:8000:8000"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/ready')"]
+      interval: 10s
+      start_period: 90s
+      retries: 10
+  worker:
+    build: {context: ., dockerfile: infrastructure/Dockerfile.api}
+    command: ["python", "-m", "services.inference.worker"]
+    environment: *backend
+    volumes: ["./artifacts:/app/artifacts:ro"]
+    depends_on:
+      api: {condition: service_healthy}
+  web:
+    build: {context: apps/web}
+    environment:
+      API_URL: http://api:8000
+    ports: ["127.0.0.1:3000:3000"]
+    depends_on:
+      api: {condition: service_healthy}
+volumes:
+  postgres-data:

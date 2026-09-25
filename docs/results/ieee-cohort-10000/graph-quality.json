@@ -1,0 +1,69 @@
+{
+  "transaction_nodes": 8019,
+  "unique_entity_signatures": {
+    "account": 4643,
+    "card": 1843,
+    "device": 143,
+    "address": 60,
+    "merchant": 0
+  },
+  "causal_projection_edges": 115098,
+  "edges_by_relation": {
+    "account": 11644,
+    "card": 35910,
+    "device": 11018,
+    "address": 56526,
+    "merchant": 0
+  },
+  "isolated_transactions": 14,
+  "weak_components": 18,
+  "degree_quantiles": {
+    "0": 0.0,
+    "0.5": 26.0,
+    "0.95": 43.0,
+    "1": 64.0
+  },
+  "max_source_time_violation": false,
+  "highest_degree_transactions": [
+    {
+      "id": "2991158",
+      "degree": 64
+    },
+    {
+      "id": "2991876",
+      "degree": 62
+    },
+    {
+      "id": "2991939",
+      "degree": 58
+    },
+    {
+      "id": "2990493",
+      "degree": 57
+    },
+    {
+      "id": "2991788",
+      "degree": 56
+    },
+    {
+      "id": "2992236",
+      "degree": 56
+    },
+    {
+      "id": "2992241",
+      "degree": 56
+    },
+    {
+      "id": "2993188",
+      "degree": 56
+    },
+    {
+      "id": "2993628",
+      "degree": 56
+    },
+    {
+      "id": "2989827",
+      "degree": 55
+    }
+  ]
+}
